@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { name: 'ABOUT', path: '/about' },
   { name: 'TRACKS', path: '/tracks' },
   { name: 'SPONSOR', path: '/sponsors' },
-  { name: 'CONTACT', path: '/faq' },
+  { name: 'CONTACT', path: '/contact' },
 ];
 
 const Navbar = () => {
