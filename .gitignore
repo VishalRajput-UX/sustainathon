@@ -1,0 +1,4 @@
+node_modules/
+*.tsbuildinfo
+output/playwright/
+.playwright-cli/
