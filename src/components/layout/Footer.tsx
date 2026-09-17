@@ -66,7 +66,7 @@ const Footer = () => {
         {/* Left Side: Eyebrow + Email + Nav */}
         <div className="flex flex-col items-start mb-20 md:mb-0">
           <span className="text-[#888888] text-sm mb-2 font-normal">
-            Live Limitless
+            Mail Us At
           </span>
           <a
             href="mailto:hackathon@sharda.ac.in"
@@ -75,26 +75,16 @@ const Footer = () => {
             hackathon@sharda.ac.in
           </a>
           
-          <nav className="flex flex-wrap gap-x-12 gap-y-4 text-sm text-[#888888] font-normal">
-            {["How It Works", "Who Benefits", "Events", "Learn More"].map((item) => (
-              <a
-                key={item}
-                href={`#${item.toLowerCase().replace(/\s+/g, '-')}`}
-                className="hover:text-white transition-colors duration-300"
-              >
-                {item}
-              </a>
-            ))}
-          </nav>
+          
         </div>
 
         {/* Right Side: CTA (Left-aligned internally, positioned on right) */}
         <div className="flex flex-col items-start text-left mt-8 md:mt-0">
           <h3 className="text-white text-xl md:text-2xl mb-2 font-medium tracking-tight">
-            Upgrade Your Reality
+           Innovate For Impact
           </h3>
           <p className="text-[#888888] text-sm max-w-[260px] mb-8 leading-relaxed font-normal">
-            Join the waitlist and get priority access
+            Innovate today for a sustainable tomorrow
           </p>
           
           <button className="bg-white text-black font-medium text-sm rounded-full px-7 py-3 hover:scale-105 transition-transform duration-300 ease-out">
@@ -111,10 +101,10 @@ const Footer = () => {
         
         {/* Social Row */}
         <div className="w-full max-w-[1920px] mx-auto px-6 md:px-12 flex flex-wrap justify-center md:justify-between gap-x-6 gap-y-3 pb-5 text-[14px] md:text-[15px] text-white font-medium">
-          <a href="#" className="hover:text-[#B48EFE] transition-colors">Instagram</a>
-          <a href="#" className="hover:text-[#B48EFE] transition-colors">LinkedIn</a>
+          <a href="https://www.instagram.com/_team_infusion_/" className="hover:text-[#B48EFE] transition-colors">Instagram</a>
+          <a href="https://chat.whatsapp.com/DxDyWzt3cPV9bqY1keIntq" className="hover:text-[#B48EFE] transition-colors">Whatsapp</a>
           <a href="#" className="hover:text-[#B48EFE] transition-colors">Twitter X</a>
-          <a href="#" className="hover:text-[#B48EFE] transition-colors">Youtube</a>
+          <a href="https://www.youtube.com/@shardauniversity" className="hover:text-[#B48EFE] transition-colors">Youtube</a>
         </div>
 
         {/* Thin Divider */}

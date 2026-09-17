@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
+import shardaLogo from '../../assets/images/sharda-logo.png';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const NAV_LINKS = [
@@ -8,7 +9,7 @@ const NAV_LINKS = [
   { name: 'ABOUT', path: '/about' },
   { name: 'TRACKS', path: '/tracks' },
   { name: 'SPONSOR', path: '/sponsors' },
-  { name: 'FAQ', path: '/faq' },
+  { name: 'CONTACT', path: '/faq' },
 ];
 
 const Navbar = () => {
@@ -47,11 +48,6 @@ const Navbar = () => {
 
           {/* CENTER: NAVIGATION (Mathematically Centered) */}
           <nav className="absolute left-1/2 -translate-x-1/2 top-0 hidden md:flex pointer-events-auto items-center justify-center space-x-1 lg:space-x-2 border border-white/5 bg-black/40 backdrop-blur-xl px-4 lg:px-6 py-[8px] lg:py-[10px] rounded-full shadow-2xl">
-            <button className="flex items-center space-x-2 mr-4 lg:mr-6 text-[9px] lg:text-[10px] tracking-[0.2em] text-white/50 hover:text-white transition-colors duration-300 uppercase font-medium">
-              <span className="text-sm leading-none -mt-[2px]">☰</span>
-              <span className="hidden lg:inline">MENU</span>
-            </button>
-            
             {NAV_LINKS.map((link) => (
               <NavLink 
                 key={link.name} 
@@ -72,11 +68,9 @@ const Navbar = () => {
             ))}
           </nav>
 
-          {/* RIGHT: INFUSION SOCIETY BRAND */}
+          {/* RIGHT: SHARDA LOGO */}
           <div className="hidden sm:flex items-center pointer-events-auto group cursor-pointer transition-opacity duration-300 hover:opacity-80">
-            <span className="font-sans font-bold text-[9px] md:text-xs tracking-[0.15em] md:tracking-[0.2em] leading-none text-white uppercase">
-              INFUSION SOCIETY
-            </span>
+            <img src={shardaLogo} alt="Sharda Logo" className="h-6 md:h-8 lg:h-10 object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]" />
           </div>
 
           {/* MOBILE FALLBACK RIGHT */}
@@ -123,10 +117,8 @@ const Navbar = () => {
                 </motion.div>
               ))}
             </nav>
-            <div className="absolute bottom-10 left-0 w-full flex justify-center text-center">
-              <span className="font-sans font-bold text-[10px] tracking-[0.2em] leading-none text-white/50 uppercase">
-                INFUSION SOCIETY
-              </span>
+            <div className="absolute bottom-10 left-0 w-full flex justify-center items-center">
+              <img src={shardaLogo} alt="Sharda Logo" className="h-1 object-contain opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]" />
             </div>
           </motion.div>
         )}
