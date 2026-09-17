@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+  body {
+    @apply bg-background text-primary font-sans;
+    min-height: 100dvh;
+    min-height: 100svh;
+  }
+}
+
+@layer utilities {
+  .clip-path-mask {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  
+  .text-liquid {
+    background: 
+      radial-gradient(70% 100% at 50% 50%, rgba(0, 100, 255, 0.8) 0%, transparent 50%),
+      radial-gradient(60% 100% at 20% 50%, rgba(0, 50, 255, 0.9) 0%, transparent 60%),
+      radial-gradient(70% 80% at 80% 30%, rgba(0, 200, 255, 0.7) 0%, transparent 50%),
+      linear-gradient(110deg, #000000 0%, #000000 15%, #001133 35%, #0044ff 50%, #001133 65%, #000000 85%, #000000 100%);
+    background-size: 250% 250%, 300% 300%, 200% 200%, 300% 100%;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: liquid-smoke 8s ease-in-out infinite alternate;
+  }
+
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+    will-change: transform;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-marquee, .text-liquid, .text-red-texture {
+      animation-play-state: paused;
+    }
+  }
+
+  .text-red-texture {
+    background-color: #8f0707;
+    background-image:
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.25'/%3E%3C/svg%3E"),
+      linear-gradient(180deg, rgba(200,20,20,0.8) 0%, rgba(90,5,5,0.95) 100%);
+    background-size: 150px 150px, 100% 100%;
+    background-blend-mode: overlay, normal;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-red-3d {
+    filter: drop-shadow(0px 2px 0px #470101)
+            drop-shadow(0px 4px 0px #2a0000)
+            drop-shadow(0px 10px 15px rgba(0,0,0,0.8));
+  }
+
+  .glass-chrome-text {
+    background: linear-gradient(
+      120deg,
+      #ffffff 0%,
+      #e2f0ff 10%,
+      #4a6b8c 25%,
+      #050810 40%,
+      #8b5cf6 55%,
+      #111827 75%,
+      #ffffff 90%,
+      #ffffff 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-stroke: 3px rgba(255, 255, 255, 0.7);
+    filter: drop-shadow(0px 25px 35px rgba(0,0,0,0.9)) drop-shadow(0px 0px 25px rgba(255,255,255,0.1));
+  }
+  
+  .glass-chrome-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,0.95) 0%,
+      rgba(255,255,255,0) 25%,
+      rgba(255,255,255,0) 75%,
+      rgba(180, 220, 255, 0.6) 100%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    mix-blend-mode: overlay;
+  }
+}
+
+@keyframes liquid-smoke {
+  0% {
+    background-position: 0% 0%, 100% 100%, 0% 50%, 0% 50%;
+  }
+  33% {
+    background-position: 50% 100%, 0% 50%, 100% 0%, 50% 50%;
+  }
+  66% {
+    background-position: 100% 0%, 50% 0%, 50% 100%, 100% 50%;
+  }
+  100% {
+    background-position: 0% 100%, 0% 0%, 100% 50%, 0% 50%;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
