@@ -2,11 +2,11 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/layout/Navbar';
 import Home from './pages/Home/Home';
+import Tracks from './pages/Tracks/Tracks';
 import PageTransition from './components/layout/PageTransition';
 
 // Placeholder pages
 const About = () => <PageTransition><div className="h-screen flex items-center justify-center pt-24 text-white"><h1 className="text-4xl">About</h1></div></PageTransition>;
-const Tracks = () => <PageTransition><div className="h-screen flex items-center justify-center pt-24 text-white"><h1 className="text-4xl">Tracks</h1></div></PageTransition>;
 const Sponsors = () => <PageTransition><div className="h-screen flex items-center justify-center pt-24 text-white"><h1 className="text-4xl">Sponsors</h1></div></PageTransition>;
 const FAQ = () => <PageTransition><div className="h-screen flex items-center justify-center pt-24 text-white"><h1 className="text-4xl">FAQ</h1></div></PageTransition>;
 
@@ -20,7 +20,7 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<PageTransition><Home /></PageTransition>} />
         <Route path="/about" element={<About />} />
-        <Route path="/tracks" element={<Tracks />} />
+        <Route path="/tracks" element={<PageTransition><Tracks /></PageTransition>} />
         <Route path="/sponsors" element={<Sponsors />} />
         <Route path="/faq" element={<FAQ />} />
       </Routes>
