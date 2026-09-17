@@ -1,15 +1,9 @@
-import imgMain1 from '../assets/images/main1.jpg';
-import imgMain2 from '../assets/images/main2.jpg';
-import imgWin from '../assets/images/win.jpg';
-import imgMain3 from '../assets/images/main3.jpg';
-import imgMain4 from '../assets/images/main4.jpg';
-
 export const heroCards = [
   {
     id: 1,
     tag: '#ClimateTech',
     title: 'A CLEANER\nPLANET',
-    image: imgMain1,
+    image: "https://res.cloudinary.com/u79xuib0/image/upload/v1789635926/WhatsApp_Image_2026-09-17_at_2.31.19_PM_2.jpg",
     rotation: -12,
     yOffset: 30,
     zIndex: 1,
@@ -18,7 +12,7 @@ export const heroCards = [
   {
     id: 2,
     title: 'SMARTER\nSOLUTIONS',
-    image: imgMain2,
+    image: "https://res.cloudinary.com/u79xuib0/image/upload/v1789635926/WhatsApp_Image_2026-09-17_at_2.31.20_PM.jpg",
     rotation: -6,
     yOffset: 10,
     zIndex: 2,
@@ -28,7 +22,7 @@ export const heroCards = [
     id: 3,
     tag: '#SustainAthon2.0',
     title: '',
-    image: imgWin,
+    image: "https://res.cloudinary.com/u79xuib0/image/upload/v1789635928/WhatsApp_Image_2026-09-17_at_2.31.23_PM_2.jpg",
     rotation: 0,
     yOffset: 0,
     zIndex: 3,
@@ -37,7 +31,7 @@ export const heroCards = [
   {
     id: 4,
     title: 'BRIGHTER\nTOMORROW',
-    image: imgMain3,
+    image: "https://res.cloudinary.com/u79xuib0/image/upload/v1789635928/WhatsApp_Image_2026-09-17_at_2.31.20_PM_1.jpg",
     rotation: 6,
     yOffset: 15,
     zIndex: 2,
@@ -47,7 +41,7 @@ export const heroCards = [
     id: 5,
     tag: '#BuildWhatNext',
     title: 'BOLDER\nTOGETHER',
-    image: imgMain4,
+    image: "https://res.cloudinary.com/u79xuib0/image/upload/v1789635928/WhatsApp_Image_2026-09-17_at_2.31.21_PM.jpg",
     rotation: 12,
     yOffset: 35,
     zIndex: 1,
