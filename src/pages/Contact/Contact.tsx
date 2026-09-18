@@ -4,7 +4,7 @@ import { ContactForm } from './ContactForm';
 import { ContactMap } from './ContactMap';
 import { ContactFAQ } from './ContactFAQ';
 import Footer from '../../components/layout/Footer';
-import GhostCursor from '../../components/ui/GhostCursor';
+// import GhostCursor from '../../components/ui/GhostCursor';
 import TextType from '../../components/ui/TextType';
 
 const Contact: React.FC = () => {
@@ -12,9 +12,9 @@ const Contact: React.FC = () => {
     <main className="relative min-h-[100dvh] bg-[#0A0A0A] font-display text-secondary selection:bg-accentOrange selection:text-white">
       
       {/* GHOST CURSOR BACKGROUND */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
+      {/* <div className="fixed inset-0 z-0 pointer-events-none">
         <GhostCursor color="#E86F3E" />
-      </div>
+      </div> */}
 
       {/* Container matching Tracks & Home styling */}
       <div className="relative z-10 mx-auto max-w-[1400px] px-6 pt-32 md:px-12 md:pt-44 lg:px-16">
