@@ -4,23 +4,46 @@ import { ContactForm } from './ContactForm';
 import { ContactMap } from './ContactMap';
 import { ContactFAQ } from './ContactFAQ';
 import Footer from '../../components/layout/Footer';
+import GhostCursor from '../../components/ui/GhostCursor';
+import TextType from '../../components/ui/TextType';
 
 const Contact: React.FC = () => {
   return (
-    <main className="min-h-[100dvh] bg-[#0A0A0A] font-display text-secondary selection:bg-accentOrange selection:text-white">
+    <main className="relative min-h-[100dvh] bg-[#0A0A0A] font-display text-secondary selection:bg-accentOrange selection:text-white">
+      
+      {/* GHOST CURSOR BACKGROUND */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <GhostCursor color="#E86F3E" />
+      </div>
+
       {/* Container matching Tracks & Home styling */}
-      <div className="mx-auto max-w-[1400px] px-6 pt-32 md:px-12 md:pt-44 lg:px-16">
+      <div className="relative z-10 mx-auto max-w-[1400px] px-6 pt-32 md:px-12 md:pt-44 lg:px-16">
         
         {/* HERO HEADER */}
         <header className="grid gap-8 pb-16 md:grid-cols-[1.3fr_1fr] md:items-end md:gap-16 md:pb-24 border-b border-white/15">
           <div>
-            <p className="mb-4 text-xs font-mono font-medium uppercase tracking-[0.25em] text-accentOrange">
-              Sustain-a-thon 2.0 / Support & Connect
-            </p>
-            <h1 className="font-royal text-[clamp(2.5rem,5.5vw,5.5rem)] uppercase leading-[1] tracking-tight text-white">
-              HAVE QUESTIONS?
-              <br />
-              <span className="text-accentOrange">LET&apos;S CONNECT.</span>
+            <TextType
+              as="p"
+              text="Sustain-a-thon 2.0 / Support & Connect"
+              className="mb-4 text-xs font-mono font-medium uppercase tracking-[0.25em] text-accentOrange"
+              loop={false}
+              showCursor={false}
+              typingSpeed={30}
+              startOnVisible={true}
+            />
+            <h1 className="font-royal text-[clamp(2.5rem,5.5vw,5.5rem)] uppercase leading-[1] tracking-tight text-white flex flex-col items-start">
+              <span>HAVE QUESTIONS?</span>
+              <TextType
+                as="span"
+                text={["LET'S CONNECT.", "REACH OUT.", "WE'RE HERE."]}
+                className="text-accentOrange"
+                typingSpeed={70}
+                deletingSpeed={40}
+                pauseDuration={2000}
+                showCursor={true}
+                cursorCharacter="_"
+                startOnVisible={true}
+              />
             </h1>
           </div>
 
