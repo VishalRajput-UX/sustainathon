@@ -5,8 +5,9 @@ import Home from './pages/Home/Home';
 import Tracks from './pages/Tracks/Tracks';
 import PageTransition from './components/layout/PageTransition';
 
+import About from './pages/About/About';
+
 // Placeholder pages
-const About = () => <PageTransition><div className="h-screen flex items-center justify-center pt-24 text-white"><h1 className="text-4xl">About</h1></div></PageTransition>;
 const Sponsors = () => <PageTransition><div className="h-screen flex items-center justify-center pt-24 text-white"><h1 className="text-4xl">Sponsors</h1></div></PageTransition>;
 // const FAQ = () => <PageTransition><div className="h-screen flex items-center justify-center pt-24 text-white"><h1 className="text-4xl">FAQ</h1></div></PageTransition>;
 
