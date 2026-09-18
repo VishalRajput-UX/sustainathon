@@ -122,10 +122,10 @@ const Footer = () => {
           <p className="text-[#888888] text-sm max-w-[260px] mb-8 leading-relaxed font-normal">
             Innovate today for a sustainable tomorrow
           </p>
-          
+          <a href="https://forms.gle/zbYYm9C4eP87xHm47">
           <button className="bg-white text-black font-medium text-sm rounded-full px-7 py-3 hover:scale-105 transition-transform duration-300 ease-out">
             Register Now
-          </button>
+          </button></a>
         </div>
       </div>
 

@@ -2,33 +2,35 @@ import PageTransition from '../../components/layout/PageTransition';
 import { HoverExpandGallery } from '../../components/ui/hover-expand-gallery';
 import DecryptedText from '../../components/ui/DecryptedText';
 import TextType from '../../components/ui/TextType';
+import { MeetTheTeam } from '../../components/ui/meet-the-team';
+import { EditorialConnect } from '../../components/ui/editorial-connect';
 import Footer from '../../components/layout/Footer';
 
 // Use actual existing local assets for the images
 
 const aboutImages = [
   {
-    src: "https://res.cloudinary.com/u79xuib0/image/upload/v1789635926/WhatsApp_Image_2026-09-17_at_2.31.19_PM_2.jpg",
+    src: "https://res.cloudinary.com/uj8rnowh/image/upload/v1789746243/DSC_0523.jpg",
     alt: "Sustainathon Event Atmosphere",
     code: "01 / 08",
   },
   {
-    src: "https://res.cloudinary.com/u79xuib0/image/upload/v1789635926/WhatsApp_Image_2026-09-17_at_2.31.20_PM.jpg",
+    src: "https://res.cloudinary.com/uj8rnowh/image/upload/v1789746231/DSC_0206.jpg",
     alt: "Hackathon Participants",
     code: "02 / 08",
   },
   {
-    src: "https://res.cloudinary.com/u79xuib0/image/upload/v1789635928/WhatsApp_Image_2026-09-17_at_2.31.20_PM_1.jpg",
+    src: "https://res.cloudinary.com/uj8rnowh/image/upload/v1789746237/DSC_0131.jpg",
     alt: "Coding and Technology",
     code: "03 / 08",
   },
   {
-    src: "https://res.cloudinary.com/u79xuib0/image/upload/v1789635928/WhatsApp_Image_2026-09-17_at_2.31.21_PM.jpg",
+    src: "https://res.cloudinary.com/uj8rnowh/image/upload/v1789746229/DSC_0146.jpg",
     alt: "Team Collaboration",
     code: "04 / 08",
   },
   {
-    src: "https://res.cloudinary.com/u79xuib0/image/upload/v1789635926/WhatsApp_Image_2026-09-17_at_2.31.19_PM.jpg",
+    src: "https://res.cloudinary.com/uj8rnowh/image/upload/v1789746242/DSC_0551.jpg",
     alt: "Brainstorming Ideas",
     code: "05 / 08",
   },
@@ -38,7 +40,7 @@ const aboutImages = [
     code: "06 / 08",
   },
   {
-    src: "https://res.cloudinary.com/u79xuib0/image/upload/v1789635927/WhatsApp_Image_2026-09-17_at_2.31.21_PM_1.jpg",
+    src: "https://res.cloudinary.com/uj8rnowh/image/upload/v1789746231/DSC_0149.jpg",
     alt: "Mentorship Session",
     code: "07 / 08",
   },
@@ -72,7 +74,7 @@ const About = () => {
               <TextType
                 as="span"
                 text="MEET INOVATION"
-                className="text-accentOrange"
+                className="text-gradient-wave"
                 loop={false}
                 showCursor={true}
                 cursorCharacter="_"
@@ -84,7 +86,7 @@ const About = () => {
             </h1>
             <p className="mt-6 text-sm md:text-base leading-relaxed text-[#AEAAA5] max-w-2xl mx-auto">
               <DecryptedText
-                text="Sustainathon is more than a hackathon — it is a community, a movement, and a collection of people building the future. Explore the archive of previous events."
+                text="INFUSION is more than a Society it is a community, a movement, and a collection of people building the future. Explore the archive of previous events."
                 animateOn="view"
                 speed={40}
                 maxIterations={15}
@@ -100,6 +102,12 @@ const About = () => {
         <section className="relative z-10 w-full mb-24 px-2 md:px-4">
           <HoverExpandGallery images={aboutImages} initialActive={1} />
         </section>
+
+        {/* MEET THE TEAM SECTION */}
+        <MeetTheTeam />
+
+        {/* EDITORIAL CONNECT SECTION */}
+        <EditorialConnect />
 
         {/* FOOTER */}
         <Footer />
