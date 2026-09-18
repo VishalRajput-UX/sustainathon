@@ -78,10 +78,6 @@ const About = () => {
               <span className="text-accentOrange">MEET INOVATION</span>
             </h1>
             <p className="mt-6 text-sm md:text-base leading-relaxed text-[#AEAAA5] max-w-2xl mx-auto">
-
-              Sustainathon is more than a hackathon — it is a community, a
-              movement, and a collection of people building the future. Explore
-              the archive of previous events.
               <DecryptedText
                 text="Sustainathon is more than a hackathon — it is a community, a movement, and a collection of people building the future. Explore the archive of previous events."
                 animateOn="view"
