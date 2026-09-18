@@ -87,10 +87,11 @@ const Hero = () => {
         
 
         <div className="flex flex-col sm:flex-row items-center gap-6">
+          <a href="https://forms.gle/zbYYm9C4eP87xHm47">
           <button className="bg-white text-black px-8 py-3 rounded-full font-medium text-sm hover:scale-105 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all duration-300 flex items-center group">
             Register Now
             <span className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
-          </button>
+          </button></a>
           
           <button className="flex items-center gap-3 group">
             <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white/10 transition-colors duration-300">

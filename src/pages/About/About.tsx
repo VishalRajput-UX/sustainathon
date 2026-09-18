@@ -1,10 +1,10 @@
 import PageTransition from '../../components/layout/PageTransition';
 import { HoverExpandGallery } from '../../components/ui/hover-expand-gallery';
 import DecryptedText from '../../components/ui/DecryptedText';
+import TextType from '../../components/ui/TextType';
 import Footer from '../../components/layout/Footer';
 
 // Use actual existing local assets for the images
-import aboutBg from '../../assets/images/about-bg.jpg';
 
 const aboutImages = [
   {
@@ -53,29 +53,34 @@ const About = () => {
   return (
     <PageTransition>
       <main className="min-h-screen bg-[#0A0A0A] font-display text-white selection:bg-accentOrange selection:text-white pt-32 md:pt-40 flex flex-col relative overflow-hidden">
-
         
-        {/* ATMOSPHERIC BACKGROUND */}
-        <div 
-          className="absolute inset-0 z-0 pointer-events-none"
-          style={{
-            backgroundImage: `url(${aboutBg})`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-          }}
-        />
-
         {/* HERO SECTION */}
         <section className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 flex flex-col items-center">
           <div className="text-center mb-12 md:mb-20">
             <p className="mb-4 text-xs font-mono font-medium uppercase tracking-[0.25em] text-accentOrange">
               INFUSION
             </p>
-            <h1 className="font-royal text-[clamp(2.5rem,5.5vw,5.5rem)] uppercase leading-[1] tracking-tight text-white max-w-4xl mx-auto">
-              WHERE IDEAS
-              <br />
-              <span className="text-accentOrange">MEET INOVATION</span>
+            <h1 className="font-royal text-[clamp(2.5rem,5.5vw,5.5rem)] uppercase leading-[1] tracking-tight text-white max-w-4xl mx-auto flex flex-col items-center">
+              <TextType
+                as="span"
+                text="WHERE IDEAS"
+                loop={false}
+                showCursor={false}
+                typingSpeed={70}
+                startOnVisible={true}
+              />
+              <TextType
+                as="span"
+                text="MEET INOVATION"
+                className="text-accentOrange"
+                loop={false}
+                showCursor={true}
+                cursorCharacter="_"
+                cursorBlinkDuration={0.8}
+                typingSpeed={70}
+                initialDelay={800}
+                startOnVisible={true}
+              />
             </h1>
             <p className="mt-6 text-sm md:text-base leading-relaxed text-[#AEAAA5] max-w-2xl mx-auto">
               <DecryptedText
