@@ -1,21 +1,9 @@
-import PageTransition from "../../components/layout/PageTransition";
-import { HoverExpandGallery } from "../../components/ui/hover-expand-gallery";
-import Footer from "../../components/layout/Footer";
-
 import PageTransition from '../../components/layout/PageTransition';
 import { HoverExpandGallery } from '../../components/ui/hover-expand-gallery';
 import DecryptedText from '../../components/ui/DecryptedText';
 import Footer from '../../components/layout/Footer';
 
 // Use actual existing local assets for the images
-import main1 from '../../assets/images/main1.jpg';
-import main2 from '../../assets/images/main2.jpg';
-import main3 from '../../assets/images/main3.jpg';
-import main4 from '../../assets/images/main4.jpg';
-import idea from '../../assets/images/idea.jpg';
-import table1 from '../../assets/images/table1.jpg';
-import table3 from '../../assets/images/table3.jpg';
-import win from '../../assets/images/win.jpg';
 import aboutBg from '../../assets/images/about-bg.jpg';
 
 const aboutImages = [
