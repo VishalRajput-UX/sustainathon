@@ -6,9 +6,8 @@ import Tracks from './pages/Tracks/Tracks';
 import PageTransition from './components/layout/PageTransition';
 
 import About from './pages/About/About';
+import Sponsors from './pages/Sponsors/Sponsors';
 
-// Placeholder pages
-const Sponsors = () => <PageTransition><div className="h-screen flex items-center justify-center pt-24 text-white"><h1 className="text-4xl">Sponsors</h1></div></PageTransition>;
 // const FAQ = () => <PageTransition><div className="h-screen flex items-center justify-center pt-24 text-white"><h1 className="text-4xl">FAQ</h1></div></PageTransition>;
 
 import Cursor from './components/ui/Cursor';
@@ -23,7 +22,7 @@ const AnimatedRoutes = () => {
         <Route path="/" element={<PageTransition><Home /></PageTransition>} />
         <Route path="/about" element={<About />} />
         <Route path="/tracks" element={<PageTransition><Tracks /></PageTransition>} />
-        <Route path="/sponsors" element={<Sponsors />} />
+        <Route path="/sponsors" element={<PageTransition><Sponsors /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
       </Routes>
     </AnimatePresence>
