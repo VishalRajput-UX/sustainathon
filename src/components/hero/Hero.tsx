@@ -6,6 +6,8 @@ import HeroCards from './HeroCards';
 import gsap from 'gsap';
 import { VideoModal } from '../ui/VideoModal';
 
+import { isSiteLoaded } from '../../lib/loaderState';
+
 const teaserVideo = 'https://drive.google.com/file/d/1tiam6lEknbEXBofnSCJHnNLVUVgliILk/view?usp=sharing';
 
 const Hero = () => {
@@ -41,13 +43,14 @@ const Hero = () => {
   }, [prefersReducedMotion]);
 
   useEffect(() => {
+    const isImmediate = isSiteLoaded();
     const ctx = gsap.context(() => {
-      gsap.set(bottomElementsRef.current, { opacity: 0, y: 20 });
+      gsap.set(bottomElementsRef.current, { opacity: 0, y: isImmediate ? 10 : 20 });
       gsap.set(scrollIndicatorRef.current, { opacity: 0 });
 
-      const tl = gsap.timeline({ delay: 5.6 });
-      tl.to(bottomElementsRef.current, { opacity: 1, y: 0, duration: 1, ease: 'power2.out' })
-        .to(scrollIndicatorRef.current, { opacity: 1, duration: 1 }, "-=0.5");
+      const tl = gsap.timeline({ delay: isImmediate ? 0.15 : 5.6 });
+      tl.to(bottomElementsRef.current, { opacity: 1, y: 0, duration: isImmediate ? 0.5 : 1, ease: 'power2.out' })
+        .to(scrollIndicatorRef.current, { opacity: 1, duration: isImmediate ? 0.5 : 1 }, "-=0.3");
 
       // Scroll Indicator animation
       gsap.to('.scroll-arrow', {
