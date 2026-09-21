@@ -1,0 +1,12 @@
+.scroll-reveal {
+  /* Let Tailwind handle outer margins */
+}
+
+.scroll-reveal-text {
+  /* Tailwind handles typography */
+}
+
+.word {
+  display: inline-block;
+  white-space: pre-wrap; /* Preserve spaces if necessary */
+}
