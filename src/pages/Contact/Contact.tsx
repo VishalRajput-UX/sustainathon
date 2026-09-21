@@ -2,7 +2,7 @@ import React from 'react';
 import { Mail, MessageCircle, Clock, Users, ArrowUpRight, Instagram, Youtube } from 'lucide-react';
 import { ContactForm } from './ContactForm';
 import { ContactMap } from './ContactMap';
-import { ContactFAQ } from './ContactFAQ';
+// import { ContactFAQ } from './ContactFAQ';
 import Footer from '../../components/layout/Footer';
 // import GhostCursor from '../../components/ui/GhostCursor';
 import TextType from '../../components/ui/TextType';
@@ -71,14 +71,14 @@ const Contact: React.FC = () => {
                 <span>Campus Location</span>
                 <span>↓</span>
               </a>
-              <span>•</span>
-              <a
+              {/* <span>•</span> */}
+              {/* <a
                 href="#faq-heading"
                 className="inline-flex items-center gap-2 border-b border-accentOrange/60 pb-1 text-white hover:text-accentOrange transition-colors"
               >
                 <span>Read FAQ</span>
                 <span>↓</span>
-              </a>
+              </a> */}
             </div>
           </div>
         </header>
@@ -208,7 +208,7 @@ const Contact: React.FC = () => {
         <ContactMap />
 
         {/* QUICK FAQ SECTION */}
-        <ContactFAQ />
+        {/* <ContactFAQ /> */}
 
       </div>
 
