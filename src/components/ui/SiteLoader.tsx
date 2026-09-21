@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { AnimatePresence, motion } from "framer-motion";
 import { GrainGradient } from "@paper-design/shaders-react";
+import { isSiteLoaded, markSiteAsLoaded } from "../../lib/loaderState";
 
 const SiteLoader = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -11,16 +12,17 @@ const SiteLoader = () => {
   const counterRef = useRef<HTMLSpanElement>(null);
   const progressRef = useRef<HTMLDivElement>(null);
   
-  const [isLoaded, setIsLoaded] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(() => isSiteLoaded());
   const [index, setIndex] = useState(0);
 
   // Sync morphing animation
   useEffect(() => {
+    if (isLoaded) return;
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % 3);
     }, 1100);
     return () => clearInterval(interval);
-  }, []);
+  }, [isLoaded]);
 
   // Lock scroll
   useEffect(() => {
@@ -32,11 +34,13 @@ const SiteLoader = () => {
 
   // Main GSAP Timeline
   useEffect(() => {
+    if (isLoaded) return;
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({
         onComplete: () => {
+          markSiteAsLoaded();
           setIsLoaded(true);
           document.body.style.overflow = '';
         }
@@ -50,7 +54,12 @@ const SiteLoader = () => {
           .to([leftPanelRef.current, rightPanelRef.current], {
             xPercent: (i) => (i === 0 ? -100 : 100),
             duration: 0.8,
-            ease: "power2.inOut"
+            ease: "power2.inOut",
+            onComplete: () => {
+              markSiteAsLoaded();
+              setIsLoaded(true);
+              document.body.style.overflow = '';
+            }
           });
         return;
       }

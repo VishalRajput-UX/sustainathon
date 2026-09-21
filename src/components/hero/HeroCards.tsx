@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-
-;
 import { heroCards } from '../../data/heroCards';
 import gsap from 'gsap';
+import { isSiteLoaded } from '../../lib/loaderState';
 
 const HeroCards = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -11,25 +10,9 @@ const HeroCards = () => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
+    const isImmediate = isSiteLoaded();
     // Entrance Animation
     const ctx = gsap.context(() => {
-      // Set initial states
-      gsap.set(cardRefs.current, {
-        x: 0,
-        y: 0,
-        rotation: 0,
-        scale: 0.8,
-        opacity: 0,
-        filter: 'blur(10px)',
-      });
-
-      gsap.set(tagRefs.current, {
-        opacity: 0,
-        y: 20,
-      });
-
-      const tl = gsap.timeline({ delay: 4.8 });
-
       // Calculate relative x offsets for spreading based on screen width
       const isMobile = window.innerWidth < 768;
       const spreadX = isMobile 
@@ -40,47 +23,94 @@ const HeroCards = () => {
         : [30, 10, 0, 15, 35];
       const rotations = [-12, -6, 0, 6, 12];
 
-      // Center card (index 2) appears first
-      tl.to(cardRefs.current[2], {
-        scale: isMobile ? 0.8 : 1,
-        opacity: 1,
-        filter: 'blur(0px)',
-        duration: 0.8,
-        ease: 'power3.out',
-      });
+      if (isImmediate) {
+        // Fast entrance on navigate-back: cards fan into position right away
+        cardRefs.current.forEach((el, i) => {
+          if (!el) return;
+          gsap.set(el, {
+            x: spreadX[i],
+            y: spreadY[i],
+            rotation: rotations[i],
+            scale: isMobile ? (i === 2 ? 0.8 : i === 1 || i === 3 ? 0.7 : 0.6) : 1,
+            opacity: 0,
+            filter: 'blur(0px)',
+          });
+        });
+        gsap.set(tagRefs.current, { opacity: 0, y: 10 });
 
-      // Then inner cards (1 and 3)
-      tl.to([cardRefs.current[1], cardRefs.current[3]], {
-        x: (i) => (i === 0 ? spreadX[1] : spreadX[3]),
-        y: (i) => (i === 0 ? spreadY[1] : spreadY[3]),
-        rotation: (i) => (i === 0 ? rotations[1] : rotations[3]),
-        scale: isMobile ? 0.7 : 1,
-        opacity: 1,
-        filter: 'blur(0px)',
-        duration: 0.8,
-        ease: 'power3.out',
-      }, "-=0.6");
+        const tl = gsap.timeline({ delay: 0.1 });
+        tl.to(cardRefs.current, {
+          opacity: 1,
+          duration: 0.5,
+          stagger: 0.05,
+          ease: 'power2.out',
+        }).to(tagRefs.current, {
+          opacity: 1,
+          y: 0,
+          duration: 0.4,
+          stagger: 0.05,
+          ease: 'power2.out',
+        }, "-=0.2");
+      } else {
+        // Cold initial load: wait for SiteLoader (4.8s delay)
+        gsap.set(cardRefs.current, {
+          x: 0,
+          y: 0,
+          rotation: 0,
+          scale: 0.8,
+          opacity: 0,
+          filter: 'blur(10px)',
+        });
 
-      // Then outer cards (0 and 4)
-      tl.to([cardRefs.current[0], cardRefs.current[4]], {
-        x: (i) => (i === 0 ? spreadX[0] : spreadX[4]),
-        y: (i) => (i === 0 ? spreadY[0] : spreadY[4]),
-        rotation: (i) => (i === 0 ? rotations[0] : rotations[4]),
-        scale: isMobile ? 0.6 : 1,
-        opacity: 1,
-        filter: 'blur(0px)',
-        duration: 0.8,
-        ease: 'power3.out',
-      }, "-=0.6");
+        gsap.set(tagRefs.current, {
+          opacity: 0,
+          y: 20,
+        });
 
-      // Tags appear
-      tl.to(tagRefs.current, {
-        opacity: 1,
-        y: 0,
-        duration: 0.6,
-        stagger: 0.1,
-        ease: 'power2.out',
-      }, "-=0.2");
+        const tl = gsap.timeline({ delay: 4.8 });
+
+        // Center card (index 2) appears first
+        tl.to(cardRefs.current[2], {
+          scale: isMobile ? 0.8 : 1,
+          opacity: 1,
+          filter: 'blur(0px)',
+          duration: 0.8,
+          ease: 'power3.out',
+        });
+
+        // Then inner cards (1 and 3)
+        tl.to([cardRefs.current[1], cardRefs.current[3]], {
+          x: (i) => (i === 0 ? spreadX[1] : spreadX[3]),
+          y: (i) => (i === 0 ? spreadY[1] : spreadY[3]),
+          rotation: (i) => (i === 0 ? rotations[1] : rotations[3]),
+          scale: isMobile ? 0.7 : 1,
+          opacity: 1,
+          filter: 'blur(0px)',
+          duration: 0.8,
+          ease: 'power3.out',
+        }, "-=0.6");
+
+        // Then outer cards (0 and 4)
+        tl.to([cardRefs.current[0], cardRefs.current[4]], {
+          x: (i) => (i === 0 ? spreadX[0] : spreadX[4]),
+          y: (i) => (i === 0 ? spreadY[0] : spreadY[4]),
+          rotation: (i) => (i === 0 ? rotations[0] : rotations[4]),
+          scale: isMobile ? 0.6 : 1,
+          opacity: 1,
+          filter: 'blur(0px)',
+          duration: 0.8,
+          ease: 'power3.out',
+        }, "-=0.6");
+
+        // Tags appear
+        tl.to(tagRefs.current, {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.1,
+          ease: 'power2.out',
+        }, "-=0.2");
+      }
 
     }, containerRef);
 
