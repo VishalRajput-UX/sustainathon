@@ -2,8 +2,8 @@ import PageTransition from '../../components/layout/PageTransition';
 import { HoverExpandGallery } from '../../components/ui/hover-expand-gallery';
 import DecryptedText from '../../components/ui/DecryptedText';
 import TextType from '../../components/ui/TextType';
+import { EditorialTeamScrollScene } from '../../components/ui/EditorialTeamScrollScene';
 import { MeetTheTeam } from '../../components/ui/meet-the-team';
-import { EditorialConnect } from '../../components/ui/editorial-connect';
 import Footer from '../../components/layout/Footer';
 
 // Use actual existing local assets for the images
@@ -54,7 +54,7 @@ const aboutImages = [
 const About = () => {
   return (
     <PageTransition>
-      <main className="min-h-screen bg-[#0A0A0A] font-display text-white selection:bg-accentOrange selection:text-white pt-32 md:pt-40 flex flex-col relative overflow-hidden">
+      <main className="min-h-screen bg-[#0A0A0A] font-display text-white selection:bg-accentOrange selection:text-white pt-32 md:pt-40 relative overflow-x-hidden">
         
         {/* HERO SECTION */}
         <section className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 flex flex-col items-center">
@@ -103,11 +103,11 @@ const About = () => {
           <HoverExpandGallery images={aboutImages} initialActive={1} />
         </section>
 
-        {/* MEET THE TEAM SECTION */}
+        {/* MEET THE TEAM SECTION (Re-added per request) */}
         <MeetTheTeam />
 
-        {/* EDITORIAL CONNECT SECTION */}
-        <EditorialConnect />
+        {/* EDITORIAL -> TEAM CINEMATIC SCROLL */}
+        <EditorialTeamScrollScene />
 
         {/* FOOTER */}
         <Footer />

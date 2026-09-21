@@ -6,31 +6,19 @@ const team = [
     id: 1,
     name: 'Dr. Rajneesh Kumar Singh',
     role: 'Head of the Department',
-    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=600&q=80',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789811760/Dr__Rajneesh_Kumar_Singh.jpg',
   },
   {
     id: 2,
     name: 'Prof. (Dr.) Ajay Shriram Khushwaha',
     role: 'Deputy Head of the Department',
-    image: 'https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?auto=format&fit=crop&w=600&q=80',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789811526/WhatsApp_Image_2026-09-18_at_22.26.20.jpg',
   },
   {
     id: 3,
     name: 'Ms. Kushwant Virdi',
     role: 'Co-Convener(Event Coordinator)',
     image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789745381/IMG_0869.jpg',
-  },
-  {
-    id: 4,
-    name: 'Viola Bassett',
-    role: 'Specialized Support',
-    image: 'https://images.unsplash.com/photo-1531123897727-8f129e1bf98c?auto=format&fit=crop&w=600&q=80',
-  },
-  {
-    id: 5,
-    name: 'Erik Anders',
-    role: 'VP of Customer Success',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80',
   }
 ];
 

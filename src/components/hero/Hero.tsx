@@ -4,6 +4,9 @@ import { useEffect, useRef, useState } from "react";
 import HeroHeadline from './HeroHeadline';
 import HeroCards from './HeroCards';
 import gsap from 'gsap';
+import { VideoModal } from '../ui/VideoModal';
+
+const teaserVideo = 'https://drive.google.com/file/d/1tiam6lEknbEXBofnSCJHnNLVUVgliILk/view?usp=sharing';
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -13,6 +16,7 @@ const Hero = () => {
   // Mouse Parallax
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -93,7 +97,10 @@ const Hero = () => {
             <span className="ml-2 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300">↗</span>
           </button></a>
           
-          <button className="flex items-center gap-3 group">
+          <button 
+            onClick={() => setIsVideoModalOpen(true)}
+            className="flex items-center gap-3 group"
+          >
             <div className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center group-hover:bg-white/10 transition-colors duration-300">
               <div className="w-0 h-0 border-t-[5px] border-t-transparent border-l-[8px] border-l-white border-b-[5px] border-b-transparent ml-1"></div>
             </div>
@@ -133,6 +140,12 @@ const Hero = () => {
         A BRIGHTER<br/>TOMORROW.
       </div>
 
+      {/* Video Modal Popup */}
+      <VideoModal 
+        isOpen={isVideoModalOpen} 
+        onClose={() => setIsVideoModalOpen(false)} 
+        videoSrc={teaserVideo} 
+      />
     </div>
   );
 };

@@ -2,13 +2,14 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { LogoCloud } from "../ui/logo-cloud-4";
+import scholarHubLogo from "../../assets/images/ScholarHubWork.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const logos = [
   {
-    src: "https://cdn.21st.dev/assets/mirror/bd/bdf5f3ae72bcfda892a686c03b7932985c694e9a9828643c980601bbc9e53cb4.svg",
-    alt: "Nvidia Logo",
+    src: scholarHubLogo,
+    alt: "ScholarHub Logo",
   },
   {
     src: "https://cdn.21st.dev/assets/mirror/31/319eeae853dd1af99d442b6c16b6c38dc52a66a719f8e502c65f85d26255cbd3.svg",
