@@ -7,6 +7,7 @@ import PageTransition from './components/layout/PageTransition';
 
 import About from './pages/About/About';
 import Sponsors from './pages/Sponsors/Sponsors';
+import Jury from './pages/Jury/Jury';
 
 // const FAQ = () => <PageTransition><div className="h-screen flex items-center justify-center pt-24 text-white"><h1 className="text-4xl">FAQ</h1></div></PageTransition>;
 
@@ -23,6 +24,7 @@ const AnimatedRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/tracks" element={<PageTransition><Tracks /></PageTransition>} />
         <Route path="/sponsors" element={<PageTransition><Sponsors /></PageTransition>} />
+        <Route path="/jury" element={<PageTransition><Jury /></PageTransition>} />
         <Route path="/contact" element={<PageTransition><Contact /></PageTransition>} />
       </Routes>
     </AnimatePresence>
