@@ -11,7 +11,7 @@ const team = [
   {
     id: 1,
     name: 'Moozuna Laskar',
-    role: 'Club Precident',
+    role: 'Club President',
     image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935556/a.jpg',
   },
   {
