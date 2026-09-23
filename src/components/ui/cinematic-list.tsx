@@ -208,7 +208,7 @@ export const CinematicList = () => {
             SUSTAIN-A-THON 2.0
           </span>
           <h2 className="font-royal text-4xl md:text-[clamp(3.5rem,7vw,6rem)] leading-[0.9] tracking-tight uppercase mb-4 md:mb-6 text-black">
-            BUILD WHAT MATTERS.
+            
           </h2>
           <p className="font-sans text-sm md:text-base text-black/70 max-w-md md:max-w-xl font-normal leading-relaxed">
             Explore the ideas, tracks, and experiences that define Sustain-A-Thon 2.0.
