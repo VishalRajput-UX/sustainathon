@@ -54,7 +54,7 @@ const aboutImages = [
 const About = () => {
   return (
     <PageTransition>
-      <main className="min-h-screen bg-[#0A0A0A] font-display text-white selection:bg-accentOrange selection:text-white pt-32 md:pt-40 relative overflow-x-hidden">
+      <main className="min-h-[100dvh] bg-[#0A0A0A] font-display text-white selection:bg-accentOrange selection:text-white pt-32 md:pt-40 relative overflow-x-hidden">
         
         {/* HERO SECTION */}
         <section data-nav-theme="dark" className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 flex flex-col items-center">

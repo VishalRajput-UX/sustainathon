@@ -158,7 +158,7 @@ const Navbar = () => {
               ))}
             </nav>
             <div className="absolute bottom-10 left-0 w-full flex justify-center items-center">
-              <img src={shardaLogo} alt="Sharda Logo" className=" object-contain opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]" />
+              <img src={shardaLogo} alt="Sharda Logo" className="h-8 object-contain opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]" />
             </div>
           </motion.div>
         )}

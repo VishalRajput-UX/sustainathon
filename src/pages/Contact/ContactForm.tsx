@@ -97,6 +97,7 @@ Sent via Sustainathon 2.0 Web Portal`;
             <a
               href="mailto:hackathon@sharda.ac.in"
               className="underline hover:text-emerald-100 font-semibold"
+              style={{ overflowWrap: 'anywhere' }}
             >
               hackathon@sharda.ac.in
             </a>

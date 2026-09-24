@@ -128,7 +128,7 @@ export const EditorialTeamScrollScene = () => {
           top: 0,
           left: 0,
           width: '100vw',
-          height: '100vh',
+          height: '100dvh',
           borderRadius: 0,
           duration: 1,
           ease: "power2.inOut",
@@ -182,7 +182,7 @@ export const EditorialTeamScrollScene = () => {
   }, []);
 
   return (
-    <section data-nav-theme="dark" ref={sceneRef} className="relative w-screen h-screen overflow-hidden bg-black text-white z-20 font-sans">
+    <section data-nav-theme="dark" ref={sceneRef} className="relative w-screen h-[100dvh] overflow-hidden bg-black text-white z-20 font-sans">
       
       {/* BACKGROUND DECORATIONS (Top left, bottom right asterisks) */}
       <div className="absolute inset-0 pointer-events-none opacity-50">
@@ -204,7 +204,7 @@ export const EditorialTeamScrollScene = () => {
       <div ref={teamTrackRef} className="absolute top-0 left-0 h-full flex z-30 pointer-events-none" style={{ width: `${team.length * 100}vw` }}>
         
         {/* SLIDE 1: PRESIDENT / FULLSCREEN IMAGE */}
-        <div className="relative w-screen h-screen flex-shrink-0 flex items-center justify-center overflow-hidden">
+        <div className="relative w-screen h-[100dvh] flex-shrink-0 flex items-center justify-center overflow-hidden">
           {/* The expanding clone image */}
           <img 
             ref={cloneRef} 
@@ -226,7 +226,7 @@ export const EditorialTeamScrollScene = () => {
 
         {/* SLIDES 2 to 7 */}
         {team.slice(1).map((member, index) => (
-          <div key={member.id} className="relative w-screen h-screen flex-shrink-0 flex items-center justify-center overflow-hidden bg-[#050505]">
+          <div key={member.id} className="relative w-screen h-[100dvh] flex-shrink-0 flex items-center justify-center overflow-hidden bg-[#050505]">
             <img src={member.image} className="absolute inset-0 w-full h-full object-cover opacity-20 grayscale" alt="" />
             <div className="relative z-10 flex flex-col items-center justify-center p-4">
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden mb-8 border-4 border-white/20 shadow-2xl">

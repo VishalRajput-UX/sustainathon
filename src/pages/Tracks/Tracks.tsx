@@ -34,6 +34,7 @@ const Tracks = () => {
         end: `+=${(totalSlides - 1) * 100}%`,
         pin: true,
         scrub: 1, // Smooth scrubbing
+        invalidateOnRefresh: true,
         snap: {
           snapTo: 1 / (totalSlides - 1),
           duration: 0.5,
@@ -118,7 +119,7 @@ const Tracks = () => {
                   <span aria-hidden="true" className="mb-4 block font-mono text-xl md:text-2xl text-accentOrange drop-shadow-md">
                     {tracks[activeIndex - 1].id}
                   </span>
-                  <h2 className="mb-6 text-[clamp(2rem,5vw,4.5rem)] font-royal uppercase leading-[0.95] tracking-tight text-white drop-shadow-2xl">
+                  <h2 className="mb-6 text-[clamp(1.75rem,7vw,4.5rem)] font-royal uppercase leading-[0.95] tracking-tight text-white drop-shadow-2xl break-words sm:break-normal">
                     {tracks[activeIndex - 1].title}
                   </h2>
                   

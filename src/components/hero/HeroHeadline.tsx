@@ -53,7 +53,7 @@ const HeroHeadline = () => {
         </div>
 
         {/* Foreground Title */}
-        <h1 className="font-royal text-[clamp(1.7rem,8.5vw,9.5rem)] tracking-tight md:tracking-[-0.03em] leading-[0.9] text-center text-red-texture text-red-3d uppercase relative z-10 px-4 w-full">
+        <h1 className="font-royal text-[clamp(1.5rem,7.5vw,9.5rem)] tracking-tight md:tracking-[-0.03em] leading-[0.9] text-center text-red-texture text-red-3d uppercase relative z-10 px-4 w-full">
           SUSTAIN-A-THON
         </h1>
       </div>

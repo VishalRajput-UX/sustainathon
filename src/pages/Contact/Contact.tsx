@@ -119,7 +119,8 @@ const Contact: React.FC = () => {
                   <h3 className="text-sm font-medium uppercase tracking-wider text-[#AEAAA5]">Official Support Email</h3>
                   <a
                     href="mailto:hackathon@sharda.ac.in"
-                    className="mt-1 block text-xl md:text-2xl font-medium text-white transition-colors hover:text-accentOrange break-all"
+                    className="mt-1 block text-xl md:text-2xl font-medium text-white transition-colors hover:text-accentOrange"
+                    style={{ wordBreak: 'break-word', overflowWrap: 'anywhere' }}
                   >
                     hackathon@sharda.ac.in
                   </a>
