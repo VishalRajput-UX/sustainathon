@@ -30,7 +30,7 @@ const TIMELINE_DATA = [
     id: 3,
     number: "02",
     title: "ONLINE SCREENING",
-    date: "8th Nov",
+    date: "8th Oct",
     imgSrc: main2,
   },
   {
