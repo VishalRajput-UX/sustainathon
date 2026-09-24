@@ -24,7 +24,7 @@ const team = [
 
 export const MeetTheTeam = () => {
   return (
-    <section className="relative w-full bg-[#0A0A0A] text-white py-24 overflow-hidden font-sans">
+    <section data-nav-theme="dark" className="relative w-full bg-[#0A0A0A] text-white py-24 overflow-hidden font-sans">
       
       {/* Decorative Dotted Backgrounds */}
       <div 

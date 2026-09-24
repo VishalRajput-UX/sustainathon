@@ -60,7 +60,7 @@ const Sponsors = () => {
 
   return (
     <main className="bg-[#111111] overflow-x-hidden font-display flex flex-col">
-      <section 
+      <section data-nav-theme="dark" 
         ref={containerRef}
         className="relative w-full h-[100svh] min-h-[600px] flex flex-col pt-[max(38px,env(safe-area-inset-top))] overflow-hidden justify-between"
       >

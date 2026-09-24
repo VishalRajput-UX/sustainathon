@@ -167,7 +167,7 @@ export const CinematicTeamSequence = () => {
   }, []);
 
   return (
-    <section 
+    <section data-nav-theme="dark" 
       ref={containerRef} 
       className="relative w-full bg-black text-white font-sans overflow-hidden"
       style={{ height: '100vh' }}

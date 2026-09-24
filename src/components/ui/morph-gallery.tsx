@@ -470,7 +470,7 @@ export default function MorphGallery({
     "disabled:pointer-events-none disabled:opacity-25"
 
   return (
-    <section
+    <section data-nav-theme="dark"
       className={"relative w-full overflow-hidden bg-black " + className}
       style={{ height }}
       role="region"

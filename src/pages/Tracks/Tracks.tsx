@@ -52,7 +52,7 @@ const Tracks = () => {
   }, []);
 
   return (
-    <main className="bg-[#101010] font-display text-secondary">
+    <main data-nav-theme="dark" className="bg-[#101010] font-display text-secondary">
       <div ref={containerRef} className="relative h-[100dvh] w-full overflow-hidden">
         
         {/* WebGL Morphing Background Gallery */}

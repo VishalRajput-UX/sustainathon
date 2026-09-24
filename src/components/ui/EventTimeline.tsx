@@ -21,21 +21,21 @@ const TIMELINE_DATA = [
   },
    {
     id: 2,
-    number: "03",
+    number: "02",
     title: "IDEA SUBMIT",
     date: "1st & 2nd Oct",
     imgSrc: idea,
   },
   {
     id: 3,
-    number: "02",
+    number: "03",
     title: "ONLINE SCREENING",
     date: "8th Oct",
     imgSrc: main2,
   },
   {
     id: 4,
-    number: "03",
+    number: "04",
     title: "GRAND FINALE",
     date: "27 & 28th Oct",
     imgSrc: main3,
@@ -91,7 +91,7 @@ const EventTimeline = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="w-full bg-black py-32 md:py-48 px-6 relative overflow-hidden">
+    <section data-nav-theme="dark" ref={sectionRef} className="w-full bg-black py-32 md:py-48 px-6 relative overflow-hidden">
       
       {/* Animated Background SVG Layer */}
       <BackgroundPaths />

@@ -51,7 +51,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer
+    <footer data-nav-theme="dark"
       ref={footerRef}
       className="relative w-full min-h-[100vh] bg-[#0A0A0A] flex flex-col overflow-hidden text-white pt-24"
     >

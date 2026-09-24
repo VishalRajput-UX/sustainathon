@@ -199,7 +199,7 @@ export const CinematicList = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="w-full bg-white text-black py-[clamp(5rem,10vw,9rem)] px-4 md:px-8 relative z-20 overflow-hidden">
+    <section ref={containerRef} data-nav-theme="light" className="w-full bg-white text-black py-[clamp(5rem,10vw,9rem)] px-4 md:px-8 relative z-20 overflow-hidden">
       <div className="w-full max-w-[1400px] mx-auto flex flex-col items-center">
         
         {/* Section Header */}
