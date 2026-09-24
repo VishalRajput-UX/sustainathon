@@ -75,7 +75,7 @@ export const EditorialConnect = () => {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative w-full bg-black text-white py-32 md:py-48 z-20 font-sans">
+    <section data-nav-theme="dark" ref={sectionRef} className="relative w-full bg-black text-white py-32 md:py-48 z-20 font-sans">
       
       {/* Decorative shapes wrapped in overflow-hidden so they don't break page layout */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

@@ -182,7 +182,7 @@ export const EditorialTeamScrollScene = () => {
   }, []);
 
   return (
-    <section ref={sceneRef} className="relative w-screen h-screen overflow-hidden bg-black text-white z-20 font-sans">
+    <section data-nav-theme="dark" ref={sceneRef} className="relative w-screen h-screen overflow-hidden bg-black text-white z-20 font-sans">
       
       {/* BACKGROUND DECORATIONS (Top left, bottom right asterisks) */}
       <div className="absolute inset-0 pointer-events-none opacity-50">

@@ -11,7 +11,7 @@ export const ContactFAQ: React.FC = () => {
   };
 
   return (
-    <section aria-labelledby="faq-heading" className="w-full py-16 md:py-24 border-t border-white/10">
+    <section data-nav-theme="dark" aria-labelledby="faq-heading" className="w-full py-16 md:py-24 border-t border-white/10">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-12">
         <div>
           <div className="flex items-center gap-2 text-accentOrange mb-3">

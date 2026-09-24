@@ -57,7 +57,7 @@ const About = () => {
       <main className="min-h-screen bg-[#0A0A0A] font-display text-white selection:bg-accentOrange selection:text-white pt-32 md:pt-40 relative overflow-x-hidden">
         
         {/* HERO SECTION */}
-        <section className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 flex flex-col items-center">
+        <section data-nav-theme="dark" className="relative z-10 w-full max-w-[1920px] mx-auto px-6 md:px-12 flex flex-col items-center">
           <div className="text-center mb-12 md:mb-20">
             <p className="mb-4 text-xs font-mono font-medium uppercase tracking-[0.25em] text-accentOrange">
               INFUSION
@@ -99,7 +99,7 @@ const About = () => {
         </section>
 
         {/* HOVER EXPAND GALLERY - TRULY FULL WIDTH */}
-        <section className="relative z-10 w-full mb-24 px-2 md:px-4">
+        <section data-nav-theme="dark" className="relative z-10 w-full mb-24 px-2 md:px-4">
           <HoverExpandGallery images={aboutImages} initialActive={1} />
         </section>
 

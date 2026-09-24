@@ -15,6 +15,7 @@ const NAV_LINKS = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [navTheme, setNavTheme] = useState<"dark" | "light">("dark");
   const location = useLocation();
 
   useEffect(() => {
@@ -29,19 +30,57 @@ const Navbar = () => {
     }
   }, [isOpen]);
 
+  useEffect(() => {
+    // Reset to dark on mount/route change immediately
+    setNavTheme("dark");
+
+    // Small timeout to ensure DOM is fully rendered for new routes
+    const timeout = setTimeout(() => {
+      const sections = document.querySelectorAll<HTMLElement>('[data-nav-theme]');
+      if (sections.length === 0) return;
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const theme = entry.target.getAttribute('data-nav-theme') as "dark" | "light";
+              setNavTheme(theme === "light" ? "light" : "dark");
+            }
+          });
+        },
+        {
+          threshold: 0,
+          rootMargin: "-10% 0px -85% 0px" // Detects which section crosses the top nav area
+        }
+      );
+
+      sections.forEach((section) => observer.observe(section));
+
+      return () => observer.disconnect();
+    }, 100);
+
+    return () => clearTimeout(timeout);
+  }, [location.pathname]);
+
   return (
     <>
       <header className="fixed top-0 w-full p-4 md:p-6 lg:p-10 z-50 pointer-events-none">
         <div className="relative w-full h-full flex items-start justify-between">
           
           {/* LEFT: SUSTAINATHON 2.0 BRAND */}
-          <div className="flex items-center space-x-2 md:space-x-3 pointer-events-auto group cursor-pointer transition-opacity duration-300 hover:opacity-80">
+          <div className={`flex items-center space-x-2 md:space-x-3 pointer-events-auto group cursor-pointer transition-opacity duration-300 hover:opacity-80 brand brand--${navTheme}`}>
             <img src={logo} alt="Sustainathon Logo" className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 object-contain" />
             <div className="flex items-baseline space-x-1 md:space-x-2">
-              <span className="font-sans font-bold text-[9px] sm:text-[10px] md:text-xs tracking-[0.15em] md:tracking-[0.2em] leading-none text-white uppercase">
+              <span 
+                className="brand-name font-sans font-bold text-[9px] sm:text-[10px] md:text-xs tracking-[0.15em] md:tracking-[0.2em] leading-none uppercase"
+                style={{
+                  color: navTheme === "light" ? "#111111" : "#ffffff",
+                  transition: "color 350ms ease"
+                }}
+              >
                 SUSTAINATHON
               </span>
-              <span className="font-royal text-xs sm:text-sm italic tracking-tighter text-[#E86F3E] leading-none">
+              <span className="brand-version font-royal text-xs sm:text-sm italic tracking-tighter text-[#E86F3E] leading-none">
                 2.0
               </span>
             </div>
@@ -119,7 +158,7 @@ const Navbar = () => {
               ))}
             </nav>
             <div className="absolute bottom-10 left-0 w-full flex justify-center items-center">
-              <img src={shardaLogo} alt="Sharda Logo" className="h-1 object-contain opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]" />
+              <img src={shardaLogo} alt="Sharda Logo" className=" object-contain opacity-90 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]" />
             </div>
           </motion.div>
         )}

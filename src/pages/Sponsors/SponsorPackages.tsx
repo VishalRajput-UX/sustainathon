@@ -117,7 +117,7 @@ const SponsorPackages = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="w-full bg-[#111111] text-[#F5F5F5] py-24 md:py-32 overflow-hidden flex flex-col relative z-10 border-t border-white/10">
+    <section data-nav-theme="dark" ref={containerRef} className="w-full bg-[#111111] text-[#F5F5F5] py-24 md:py-32 overflow-hidden flex flex-col relative z-10 border-t border-white/10">
       <div className="w-full max-w-[1920px] mx-auto px-6 md:px-12 lg:px-[1.5vw]">
         
         {/* INTRO AREA */}

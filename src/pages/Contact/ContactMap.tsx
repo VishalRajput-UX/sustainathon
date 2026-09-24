@@ -3,7 +3,7 @@ import { MapPin, Navigation, Compass, Train, Car } from 'lucide-react';
 
 export const ContactMap: React.FC = () => {
   return (
-    <section aria-labelledby="venue-heading" className="w-full py-16 md:py-24">
+    <section data-nav-theme="dark" aria-labelledby="venue-heading" className="w-full py-16 md:py-24">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-white/15">
         <div>
           <span className="font-mono text-xs uppercase tracking-[0.2em] text-accentOrange block mb-3">

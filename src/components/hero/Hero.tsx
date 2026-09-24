@@ -69,6 +69,7 @@ const Hero = () => {
   return (
     <div 
       ref={containerRef}
+      data-nav-theme="dark"
       className="relative min-h-[100dvh] w-full flex flex-col items-center justify-center overflow-hidden bg-black pb-32"
     >
       {/* Decorative Line SVG */}

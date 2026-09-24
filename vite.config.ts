@@ -6,4 +6,7 @@ export default defineConfig({
   plugins: [react()],
   base: '/',
   assetsInclude: ['**/*.MOV', '**/*.mov'],
+  server: {
+    host: '127.0.0.1'
+  }
 })

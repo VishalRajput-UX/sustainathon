@@ -137,7 +137,7 @@ const Jury = () => {
     <main ref={containerRef} className="bg-[#111111] overflow-x-hidden font-display flex flex-col text-[#F5F5F5]">
       
       {/* HERO SECTION */}
-      <section className="relative w-full min-h-[60svh] md:min-h-[70svh] flex flex-col items-center justify-center pt-32 pb-16 px-6 relative z-10">
+      <section data-nav-theme="dark" className="relative w-full min-h-[60svh] md:min-h-[70svh] flex flex-col items-center justify-center pt-32 pb-16 px-6 relative z-10">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(232,111,62,0.05)_0%,transparent_50%)] pointer-events-none" />
         
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto z-10">
@@ -159,7 +159,7 @@ const Jury = () => {
       </section>
 
       {/* FEATURED JURY */}
-      <section className="featured-section relative w-full px-6 md:px-12 lg:px-24 py-16 md:py-24 z-10 border-t border-white/5">
+      <section data-nav-theme="dark" className="featured-section relative w-full px-6 md:px-12 lg:px-24 py-16 md:py-24 z-10 border-t border-white/5">
         <div className="max-w-[1600px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
           
           <div className="featured-reveal w-full lg:w-1/2 aspect-[4/5] md:aspect-square lg:aspect-[4/5] relative overflow-hidden group">
@@ -204,7 +204,7 @@ const Jury = () => {
       </section>
 
       {/* JURY PANEL GRID */}
-      <section className="jury-grid relative w-full px-6 md:px-12 lg:px-24 py-16 md:py-24 z-10 bg-[#0a0a0a]">
+      <section data-nav-theme="dark" className="jury-grid relative w-full px-6 md:px-12 lg:px-24 py-16 md:py-24 z-10 bg-[#0a0a0a]">
         <div className="max-w-[1600px] mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 md:gap-8 lg:gap-10">
           {juryMembers.map((member) => (
             <div 
@@ -260,7 +260,7 @@ const Jury = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="cta-section relative w-full px-6 md:px-12 lg:px-24 py-24 md:py-32 z-10 bg-[#111111] border-t border-white/5 text-center flex flex-col items-center">
+      <section data-nav-theme="dark" className="cta-section relative w-full px-6 md:px-12 lg:px-24 py-24 md:py-32 z-10 bg-[#111111] border-t border-white/5 text-center flex flex-col items-center">
         <h2 className="cta-reveal font-royal uppercase tracking-tight leading-[0.9] text-white mb-6" style={{ fontSize: 'clamp(40px, 6vw, 90px)' }}>
           READY TO BUILD<br />THE FUTURE?
         </h2>

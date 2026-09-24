@@ -84,7 +84,7 @@ const Contact: React.FC = () => {
         </header>
 
         {/* PRIMARY CONTACT SECTION (CHANNELS + MAILTO FORM) */}
-        <section id="inquiry" aria-labelledby="inquiry-heading" className="py-16 md:py-24 scroll-mt-24">
+        <section data-nav-theme="dark" id="inquiry" aria-labelledby="inquiry-heading" className="py-16 md:py-24 scroll-mt-24">
           <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14 items-start">
             
             {/* LEFT: DIRECT SUPPORT CHANNELS */}
