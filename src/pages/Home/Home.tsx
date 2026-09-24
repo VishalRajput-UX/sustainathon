@@ -7,7 +7,7 @@ import Footer from '../../components/layout/Footer';
 
 const Home = () => {
   return (
-    <main className="w-full bg-black min-h-screen">
+    <main className="w-full bg-black min-h-[100dvh]">
       <Hero />
       <StoryScrollTransition 
         section1={<PortfolioShowcaseSection />} 

@@ -129,7 +129,7 @@ const EventTimeline = () => {
 
               {/* Center Title (Rolling Text) */}
               <div className="flex-1 overflow-hidden pr-0 md:pr-4 w-full">
-                <div className="relative h-[1.1em] font-royal uppercase text-[clamp(1.3rem,6vw,4.5rem)] leading-[1.1] text-white overflow-hidden w-fit whitespace-nowrap md:whitespace-normal">
+                <div className="relative h-auto font-royal uppercase text-[clamp(1.3rem,6vw,4.5rem)] leading-[1.1] text-white overflow-hidden w-full">
                   <span className="block transition-transform duration-[500ms] ease-[cubic-bezier(0.76,0,0.24,1)] group-hover:-translate-y-full transform-gpu">
                     {item.title}
                   </span>

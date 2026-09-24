@@ -17,7 +17,8 @@ const ShowcaseHeading = () => {
     tracking-tighter
     text-center
     leading-[0.85]
-    text-[15vw]
+    text-[9vw]
+    sm:text-[10vw]
     md:text-[11vw]
     lg:text-[10vw]
     text-liquid

@@ -144,7 +144,7 @@ const Jury = () => {
           <span className="hero-reveal text-xs font-medium uppercase tracking-[0.25em] text-accentOrange mb-6">
             THE MINDS BEHIND THE JUDGING
           </span>
-          <h1 className="hero-reveal font-royal uppercase leading-[0.85] tracking-tight mb-8" style={{ fontSize: 'clamp(60px, 10vw, 160px)' }}>
+          <h1 className="hero-reveal font-royal uppercase leading-[0.85] tracking-tight mb-8" style={{ fontSize: 'clamp(40px, 12vw, 160px)' }}>
             MEET THE JURY
           </h1>
           <p className="hero-reveal font-sans text-base md:text-xl text-[#a0a0a0] leading-relaxed max-w-2xl">
@@ -261,7 +261,7 @@ const Jury = () => {
 
       {/* FINAL CTA */}
       <section data-nav-theme="dark" className="cta-section relative w-full px-6 md:px-12 lg:px-24 py-24 md:py-32 z-10 bg-[#111111] border-t border-white/5 text-center flex flex-col items-center">
-        <h2 className="cta-reveal font-royal uppercase tracking-tight leading-[0.9] text-white mb-6" style={{ fontSize: 'clamp(40px, 6vw, 90px)' }}>
+        <h2 className="cta-reveal font-royal uppercase tracking-tight leading-[0.9] text-white mb-6" style={{ fontSize: 'clamp(32px, 8vw, 90px)' }}>
           READY TO BUILD<br />THE FUTURE?
         </h2>
         <p className="cta-reveal font-sans text-[#a0a0a0] max-w-lg mb-12">

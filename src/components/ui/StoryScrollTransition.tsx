@@ -31,6 +31,7 @@ const StoryScrollTransition = ({ section1, section2 }: Props) => {
         end: () => `+=${window.innerHeight}`, // Pin for exactly 1 viewport height
         pin: true,
         pinSpacing: false, // Allows Section 2 to natively scroll up over it
+        invalidateOnRefresh: true,
       });
 
       // 2. Animate Section 2 entrance (rotation)

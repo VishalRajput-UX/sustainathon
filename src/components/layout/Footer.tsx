@@ -79,7 +79,8 @@ const Footer = () => {
           </span>
           <a
             href="mailto:hackathon@sharda.ac.in"
-            className="text-[clamp(2.5rem,5vw,4.5rem)] font-medium tracking-tight text-white hover:text-[#B48EFE] transition-colors duration-500 mb-12 block leading-none"
+            className="text-[clamp(1.75rem,8vw,4.5rem)] font-medium tracking-tight text-white hover:text-[#B48EFE] transition-colors duration-500 mb-12 block leading-none"
+            style={{ overflowWrap: 'anywhere' }}
           >
             hackathon@sharda.ac.in
           </a>
@@ -121,7 +122,6 @@ const Footer = () => {
         <div className="w-full max-w-[1920px] mx-auto px-6 md:px-12 flex flex-wrap justify-center md:justify-between gap-x-6 gap-y-3 pb-5 text-[14px] md:text-[15px] text-white font-medium">
           <a href="https://www.instagram.com/_team_infusion_/" className="hover:text-[#B48EFE] transition-colors">Instagram</a>
           <a href="https://chat.whatsapp.com/DxDyWzt3cPV9bqY1keIntq" className="hover:text-[#B48EFE] transition-colors">Whatsapp</a>
-          <a href="#" className="hover:text-[#B48EFE] transition-colors">Twitter X</a>
           <a href="https://www.youtube.com/@shardauniversity" className="hover:text-[#B48EFE] transition-colors">Youtube</a>
         </div>
 

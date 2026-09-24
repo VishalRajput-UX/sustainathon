@@ -9,7 +9,7 @@ import About from './pages/About/About';
 import Sponsors from './pages/Sponsors/Sponsors';
 import Jury from './pages/Jury/Jury';
 
-// const FAQ = () => <PageTransition><div className="h-screen flex items-center justify-center pt-24 text-white"><h1 className="text-4xl">FAQ</h1></div></PageTransition>;
+// const FAQ = () => <PageTransition><div className="h-[100dvh] flex items-center justify-center pt-24 text-white"><h1 className="text-4xl">FAQ</h1></div></PageTransition>;
 
 import Cursor from './components/ui/Cursor';
 import SiteLoader from './components/ui/SiteLoader';

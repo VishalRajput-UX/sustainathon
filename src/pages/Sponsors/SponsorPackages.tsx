@@ -127,8 +127,8 @@ const SponsorPackages = () => {
               BECOME A SPONSOR
             </span>
             <h2 
-              className="font-royal uppercase tracking-tight leading-[0.85] text-white"
-              style={{ fontSize: 'clamp(56px, 8vw, 140px)' }}
+              className="font-royal uppercase tracking-tight leading-[0.85] text-white break-words sm:break-normal"
+              style={{ fontSize: 'clamp(26px, 9vw, 140px)' }}
             >
               PARTNER WITH<br />SUSTAIN-A-THON 2.0
             </h2>
@@ -204,8 +204,8 @@ const SponsorPackages = () => {
           className="w-full flex flex-col md:flex-row items-start md:items-end justify-between border-t border-b border-white/10 py-16 md:py-24 gap-12 group cursor-pointer hover:bg-white/[0.02] transition-colors duration-500 block"
         >
           <h2 
-            className="font-royal uppercase tracking-tight leading-[0.9] text-white max-w-4xl"
-            style={{ fontSize: 'clamp(40px, 6vw, 90px)' }}
+            className="font-royal uppercase tracking-tight leading-[0.9] text-white max-w-4xl break-words sm:break-normal"
+            style={{ fontSize: 'clamp(28px, 7vw, 90px)' }}
           >
             READY TO BUILD SOMETHING<br />MEANINGFUL TOGETHER?
           </h2>
