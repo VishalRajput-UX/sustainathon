@@ -23,14 +23,14 @@ const TIMELINE_DATA = [
     id: 2,
     number: "02",
     title: "IDEA SUBMIT",
-    date: "1st & 2nd Oct",
+    date: "1st to 7th Oct",
     imgSrc: idea,
   },
   {
     id: 3,
     number: "03",
     title: "ONLINE SCREENING",
-    date: "8th Oct",
+    date: "8th to 10th Oct",
     imgSrc: main2,
   },
   {

@@ -127,7 +127,7 @@ export const CinematicTeamSequence = () => {
         top: 0,
         left: 0,
         width: '100vw',
-        height: '100dvh',
+        height: '100vh',
         borderRadius: 0,
         duration: 1.5,
         ease: 'power2.inOut'
@@ -167,10 +167,10 @@ export const CinematicTeamSequence = () => {
   }, []);
 
   return (
-    <section data-nav-theme="dark" 
+    <section 
       ref={containerRef} 
       className="relative w-full bg-black text-white font-sans overflow-hidden"
-      style={{ height: '100dvh' }}
+      style={{ height: '100vh' }}
     >
       {/* ========================================================
           EDITORIAL LAYER (z-10)
@@ -264,7 +264,7 @@ export const CinematicTeamSequence = () => {
         className="absolute inset-0 flex h-full will-change-transform z-20 pointer-events-none"
       >
         {/* SLIDE 1: PRESIDENT (Contains the expanding inline image!) */}
-        <div className="w-screen h-[100dvh] relative flex-shrink-0 flex items-center justify-center">
+        <div className="w-screen h-screen relative flex-shrink-0 flex items-center justify-center">
           
           {/* THE EXPANDING IMAGE - Initially positioned absolutely matching the placeholder */}
           <div ref={expandingImageRef} className="overflow-hidden bg-black flex items-center justify-center pointer-events-auto">
@@ -302,7 +302,7 @@ export const CinematicTeamSequence = () => {
 
         {/* SLIDES 2-7: REST OF TEAM */}
         {teamMembers.slice(1).map((member, idx) => (
-          <div key={member.id} className="member-slide w-screen h-[100dvh] relative flex-shrink-0 border-l border-white/10 pointer-events-auto bg-black">
+          <div key={member.id} className="member-slide w-screen h-screen relative flex-shrink-0 border-l border-white/10 pointer-events-auto bg-black">
             <img 
               src={member.image} 
               alt={member.name}
