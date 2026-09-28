@@ -311,7 +311,7 @@ export const EditorialTeamScrollScene = () => {
         {/* Connect Button */}
         <div className="mt-16 md:mt-24 pointer-events-auto relative z-50">
           <a 
-            href="https://infusion-tan.vercel.app/" 
+            href="https://infusionsociety.in/" 
             target="_blank" 
             rel="noopener noreferrer"
           >
