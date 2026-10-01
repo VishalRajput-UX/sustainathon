@@ -3,3 +3,6 @@ node_modules/
 output/playwright/
 .playwright-cli/
 dist.DS_Store
+
+.DS_Store
+dist/
