@@ -1,0 +1,67 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 1164 >>
+stream
+BT
+/F1 20 Tf
+50 730 Td
+(SUSTAINATHON 2.0 - IDEA SUBMISSION TEMPLATE) Tj
+/F1 11 Tf
+0 -30 Td
+(National-Level Hackathon | Sharda University & Infusion Society) Tj
+0 -40 Td
+(1. Team & Project Details) Tj
+0 -20 Td
+(   Project Name: _____________________________________________________) Tj
+0 -20 Td
+(   Track: [AgriTech / HealthTech / Smart Cities / Cyber Security / AI / FinTech / Open]) Tj
+0 -20 Td
+(   Team Members & Institution: ________________________________________) Tj
+0 -40 Td
+(2. Problem Statement) Tj
+0 -20 Td
+(   Describe the specific sustainability or technical problem your project solves.) Tj
+0 -40 Td
+(3. Proposed Solution Architecture) Tj
+0 -20 Td
+(   Detail your core technical innovation, system design, and methodology.) Tj
+0 -40 Td
+(4. Technology Stack & Feasibility) Tj
+0 -20 Td
+(   List frameworks, hardware/IoT, APIs, AI models, and databases used.) Tj
+0 -40 Td
+(5. Measurable Impact & Sustainability) Tj
+0 -20 Td
+(   Highlight target metrics, environmental benefit, and long-term scalability.) Tj
+0 -40 Td
+(6. Grand Finale Prototype Plan) Tj
+0 -20 Td
+(   Outline what minimum viable product (MVP) you will build during the 24-hr finale.) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000010 00000 n 
+0000000060 00000 n 
+0000000117 00000 n 
+0000000240 00000 n 
+0000000300 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+400
+%%EOF
