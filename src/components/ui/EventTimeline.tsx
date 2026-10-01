@@ -150,7 +150,9 @@ const EventTimeline = () => {
                 <div className="absolute inset-0 bg-[#E10600]/10 mix-blend-color z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <img 
                   src={item.imgSrc} 
-                  alt={item.title} 
+                  alt={item.title}
+                  loading="lazy"
+                  decoding="async" 
                   className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-[cubic-bezier(0.76,0,0.24,1)] scale-105 group-hover:scale-100" 
                 />
               </div>

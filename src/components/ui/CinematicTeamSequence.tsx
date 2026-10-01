@@ -281,6 +281,8 @@ export const CinematicTeamSequence = () => {
               <img 
                 src={teamMembers[0].image} 
                 alt={teamMembers[0].name}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover opacity-60"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -306,6 +308,8 @@ export const CinematicTeamSequence = () => {
             <img 
               src={member.image} 
               alt={member.name}
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />
