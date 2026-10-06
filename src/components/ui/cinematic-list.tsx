@@ -130,7 +130,7 @@ const CinematicRow = ({ item }: { item: typeof ITEMS[0] }) => {
           <motion.div 
             className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-black/20 flex items-center justify-center shrink-0"
             animate={{
-              backgroundColor: window.innerWidth >= 768 && isHovered ? "#ffffff" : "transparent",
+              backgroundColor: window.innerWidth >= 768 && isHovered ? "#ffffff" : "rgba(255, 255, 255, 0)",
               borderColor: window.innerWidth >= 768 && isHovered ? "#ffffff" : "rgba(0,0,0,0.2)",
               scale: window.innerWidth >= 768 && isHovered ? 1.1 : 1,
             }}

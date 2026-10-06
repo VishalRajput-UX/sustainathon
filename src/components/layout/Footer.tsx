@@ -2,16 +2,14 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { LogoCloud } from "../ui/logo-cloud-4";
-import scholarHubLogo from "../../assets/images/ScholarHubWork.svg";
+import { sponsors } from "../../data/sponsors";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const logos = [
-  {
-    src: scholarHubLogo,
-    alt: "ScholarHub Logo",
-  },
-];
+const logos = sponsors.map(s => ({
+  src: s.footerLogo,
+  alt: s.alt
+}));
 
 const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);

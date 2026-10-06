@@ -1,19 +1,16 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import main1 from '../../assets/images/main1.jpg';
-import main3 from '../../assets/images/main3.jpg';
-import main4 from '../../assets/images/main4.jpg';
-import table1 from '../../assets/images/table1.jpg';
-import scholarHubLogo from '../../assets/images/ScholarHubWork.svg';
+import { sponsors } from '../../data/sponsors';
 import SponsorPackages from './SponsorPackages';
 import Footer from '../../components/layout/Footer';
 
 const sponsorHeroImages = [
   { src: main1, alt: 'Sponsor Editorial 1', isLogo: false },
-  { src: scholarHubLogo, alt: 'ScholarHub Sponsor', isLogo: true },
-  { src: main3, alt: 'Sponsor Editorial 3', isLogo: false },
-  { src: table1, alt: 'Sponsor Editorial 4', isLogo: false },
-  { src: main4, alt: 'Sponsor Editorial 5', isLogo: false },
+  { src: sponsors[0].pageLogo, alt: sponsors[0].alt, isLogo: true },
+  { src: sponsors[1].pageLogo, alt: sponsors[1].alt, isLogo: true },
+  { src: sponsors[2].pageLogo, alt: sponsors[2].alt, isLogo: true },
+  { src: sponsors[3].pageLogo, alt: sponsors[3].alt, isLogo: true },
 ];
 
 const Sponsors = () => {
@@ -79,13 +76,13 @@ const Sponsors = () => {
             <div className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6">
               <img src={sponsorHeroImages[1].src} alt={sponsorHeroImages[1].alt} className="w-full h-auto max-h-full object-contain transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
             </div>
-            {/* Image 3 */}
-            <div className="collage-item relative w-full h-full overflow-hidden group bg-[#1a1a1a]">
-              <img src={sponsorHeroImages[2].src} alt={sponsorHeroImages[2].alt} className="w-full h-full object-cover object-[center_30%] transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
+            {/* Image 3 (Logo) */}
+            <div className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6">
+              <img src={sponsorHeroImages[2].src} alt={sponsorHeroImages[2].alt} className="w-full h-auto max-h-full object-contain transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
             </div>
-            {/* Image 4 */}
-            <div className="collage-item relative w-full h-full overflow-hidden group bg-[#1a1a1a]">
-              <img src={sponsorHeroImages[3].src} alt={sponsorHeroImages[3].alt} className="w-full h-full object-cover transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
+            {/* Image 4 (Logo) */}
+            <div className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6">
+              <img src={sponsorHeroImages[3].src} alt={sponsorHeroImages[3].alt} className="w-full h-auto max-h-full object-contain transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
             </div>
             {/* Text Block */}
             <div className="collage-item relative w-full h-full flex items-center px-1 lg:px-2 xl:px-4">
@@ -93,9 +90,9 @@ const Sponsors = () => {
                 We craft bold, strategic identities that create lasting impressions, helping your brand stand out and thrive.
               </p>
             </div>
-            {/* Image 5 */}
-            <div className="collage-item relative w-full h-full overflow-hidden group bg-[#1a1a1a]">
-              <img src={sponsorHeroImages[4].src} alt={sponsorHeroImages[4].alt} className="w-full h-full object-cover transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
+            {/* Image 5 (Logo) */}
+            <div className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6">
+              <img src={sponsorHeroImages[4].src} alt={sponsorHeroImages[4].alt} className="w-full h-auto max-h-full object-contain transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
             </div>
           </div>
 
@@ -110,8 +107,18 @@ const Sponsors = () => {
                 <div className="collage-item relative flex-[1.2] overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3">
                   <img src={sponsorHeroImages[1].src} alt={sponsorHeroImages[1].alt} className="w-full h-auto max-h-full object-contain" />
                 </div>
-                <div className="collage-item relative flex-[0.9] overflow-hidden group bg-[#1a1a1a]">
-                  <img src={sponsorHeroImages[4].src} alt={sponsorHeroImages[4].alt} className="w-full h-full object-cover" />
+                <div className="collage-item relative flex-[0.9] overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3">
+                  <img src={sponsorHeroImages[2].src} alt={sponsorHeroImages[2].alt} className="w-full h-auto max-h-full object-contain" />
+                </div>
+             </div>
+             
+             {/* Second row for remaining logos */}
+             <div className="flex gap-[4px] h-[120px] sm:h-[150px]">
+                <div className="collage-item relative flex-1 overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3">
+                  <img src={sponsorHeroImages[3].src} alt={sponsorHeroImages[3].alt} className="w-full h-auto max-h-full object-contain" />
+                </div>
+                <div className="collage-item relative flex-1 overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3">
+                  <img src={sponsorHeroImages[4].src} alt={sponsorHeroImages[4].alt} className="w-full h-auto max-h-full object-contain" />
                 </div>
              </div>
              {/* Mobile Text Block */}

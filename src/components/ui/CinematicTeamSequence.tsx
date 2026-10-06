@@ -14,47 +14,47 @@ const teamMembers = [
     id: 1,
     name: 'Moozuna Laskar',
     role: 'Club Precident',
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935556/a.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789935556/a.jpg',
   },
   {
     id: 2,
     name: 'Vishal Singh',
     role: 'Gencode Club Lead',
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935555/vishal.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789935555/vishal.jpg',
   },
   {
     id: 3,
     name: 'Rahul Raj',
     role: 'IOTronix Lead',
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935556/c.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789935556/c.jpg',
   },
   {
     id: 4,
     name: 'Umang Varshney',
     role: 'CloudTitans Lead',
   
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935556/b.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789935556/b.jpg',
   },
   {
     id: 5,
     name: 'Harsh Raj',
     role: 'FrameX Lead',
 
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935556/harsh.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789935556/harsh.jpg',
   },
   {
     id: 6,
     name: 'Nirmal Puri',
     role: 'Cybershield Lead',
 
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935556/nirmal.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789935556/nirmal.jpg',
   },
   {
     id: 7,
     name: 'Moozuna Lashkar',
     role: 'OriginX Lead',
   
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935556/a.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789935556/a.jpg',
   }
 ];
 

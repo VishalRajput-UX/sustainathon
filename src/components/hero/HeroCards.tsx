@@ -166,7 +166,8 @@ const HeroCards = () => {
                 <img 
                   src={card.image} 
                   alt={card.title.replace('\n', ' ')} 
-                  fetchPriority={i === 2 ? "high" : "auto"}
+                  // @ts-ignore: React 18 runtime requires lowercase, but @types/react expects uppercase
+                  fetchpriority={i === 2 ? "high" : "auto"}
                   className="absolute inset-0 w-full h-full object-cover opacity-70 transition-transform duration-700 hover:scale-105"
                 />
                 
