@@ -1,12 +1,12 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import main1 from '../../assets/images/main1.jpg';
+import sharda from '../../assets/images/sharda.webp';
 import { sponsors } from '../../data/sponsors';
 import SponsorPackages from './SponsorPackages';
 import Footer from '../../components/layout/Footer';
 
 const sponsorHeroImages = [
-  { src: main1, alt: 'Sponsor Editorial 1', isLogo: false },
+  { src: sharda, alt: 'Sharda Sponsor Editorial', isLogo: false },
   { src: sponsors[0].pageLogo, alt: sponsors[0].alt, isLogo: true },
   { src: sponsors[1].pageLogo, alt: sponsors[1].alt, isLogo: true },
   { src: sponsors[2].pageLogo, alt: sponsors[2].alt, isLogo: true },
