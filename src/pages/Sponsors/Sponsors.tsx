@@ -1,16 +1,15 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
-import sharda from '../../assets/images/sharda.webp';
 import { sponsors } from '../../data/sponsors';
 import SponsorPackages from './SponsorPackages';
 import Footer from '../../components/layout/Footer';
 
 const sponsorHeroImages = [
-  { src: sharda, alt: 'Sharda Sponsor Editorial', isLogo: false },
-  { src: sponsors[0].pageLogo, alt: sponsors[0].alt, isLogo: true },
-  { src: sponsors[1].pageLogo, alt: sponsors[1].alt, isLogo: true },
-  { src: sponsors[2].pageLogo, alt: sponsors[2].alt, isLogo: true },
-  { src: sponsors[3].pageLogo, alt: sponsors[3].alt, isLogo: true },
+  { src: sponsors[4].pageLogo, alt: sponsors[4].alt, isLogo: true, url: sponsors[4].url },
+  { src: sponsors[0].pageLogo, alt: sponsors[0].alt, isLogo: true, url: sponsors[0].url },
+  { src: sponsors[1].pageLogo, alt: sponsors[1].alt, isLogo: true, url: sponsors[1].url },
+  { src: sponsors[2].pageLogo, alt: sponsors[2].alt, isLogo: true, url: sponsors[2].url },
+  { src: sponsors[3].pageLogo, alt: sponsors[3].alt, isLogo: true, url: sponsors[3].url },
 ];
 
 const Sponsors = () => {
@@ -68,22 +67,22 @@ const Sponsors = () => {
         >
           {/* Desktop Grid */}
           <div className="hidden md:grid grid-cols-[0.85fr_0.95fr_1fr_0.9fr_0.75fr_0.85fr] gap-[6px] lg:gap-2 xl:gap-[10px] h-[250px] lg:h-[280px] xl:h-[310px]">
-            {/* Image 1 */}
-            <div className="collage-item relative w-full h-full overflow-hidden group bg-[#1a1a1a]">
-              <img src={sponsorHeroImages[0].src} alt={sponsorHeroImages[0].alt} className="w-full h-full object-cover transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
-            </div>
+            {/* Image 1 (Logo) */}
+            <a href={sponsorHeroImages[0].url} target="_blank" rel="noopener noreferrer" className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6 cursor-pointer hover:bg-white transition-colors duration-300">
+              <img src={sponsorHeroImages[0].src} alt={sponsorHeroImages[0].alt} className="w-full h-auto max-h-full object-contain transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
+            </a>
             {/* Image 2 (Logo) */}
-            <div className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6">
+            <a href={sponsorHeroImages[1].url} target="_blank" rel="noopener noreferrer" className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6 cursor-pointer hover:bg-white transition-colors duration-300">
               <img src={sponsorHeroImages[1].src} alt={sponsorHeroImages[1].alt} className="w-full h-auto max-h-full object-contain transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
-            </div>
+            </a>
             {/* Image 3 (Logo) */}
-            <div className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6">
+            <a href={sponsorHeroImages[2].url} target="_blank" rel="noopener noreferrer" className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6 cursor-pointer hover:bg-white transition-colors duration-300">
               <img src={sponsorHeroImages[2].src} alt={sponsorHeroImages[2].alt} className="w-full h-auto max-h-full object-contain transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
-            </div>
+            </a>
             {/* Image 4 (Logo) */}
-            <div className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6">
+            <a href={sponsorHeroImages[3].url} target="_blank" rel="noopener noreferrer" className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6 cursor-pointer hover:bg-white transition-colors duration-300">
               <img src={sponsorHeroImages[3].src} alt={sponsorHeroImages[3].alt} className="w-full h-auto max-h-full object-contain transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
-            </div>
+            </a>
             {/* Text Block */}
             <div className="collage-item relative w-full h-full flex items-center px-1 lg:px-2 xl:px-4">
               <p className="text-[#F5F5F5] text-[12px] lg:text-[14px] xl:text-[15px] leading-[1.1] tracking-tight font-sans max-w-[170px]">
@@ -91,35 +90,36 @@ const Sponsors = () => {
               </p>
             </div>
             {/* Image 5 (Logo) */}
-            <div className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6">
+            <a href={sponsorHeroImages[4].url} target="_blank" rel="noopener noreferrer" className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6 cursor-pointer hover:bg-white transition-colors duration-300">
               <img src={sponsorHeroImages[4].src} alt={sponsorHeroImages[4].alt} className="w-full h-auto max-h-full object-contain transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
-            </div>
+            </a>
           </div>
 
           {/* Mobile Strip */}
           <div className="md:hidden flex flex-col gap-4">
              {/* 3 prominent images for mobile in a horizontal flex */}
              <div className="flex gap-[4px] h-[180px] sm:h-[220px]">
-                <div className="collage-item relative flex-[0.8] overflow-hidden group bg-[#1a1a1a]">
-                  <img src={sponsorHeroImages[0].src} alt={sponsorHeroImages[0].alt} className="w-full h-full object-cover" />
-                </div>
+                {/* Mobile Logo Block 1 */}
+                <a href={sponsorHeroImages[0].url} target="_blank" rel="noopener noreferrer" className="collage-item relative flex-[0.8] overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3 cursor-pointer">
+                  <img src={sponsorHeroImages[0].src} alt={sponsorHeroImages[0].alt} className="w-full h-auto max-h-full object-contain" />
+                </a>
                 {/* Mobile Logo Block */}
-                <div className="collage-item relative flex-[1.2] overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3">
+                <a href={sponsorHeroImages[1].url} target="_blank" rel="noopener noreferrer" className="collage-item relative flex-[1.2] overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3 cursor-pointer">
                   <img src={sponsorHeroImages[1].src} alt={sponsorHeroImages[1].alt} className="w-full h-auto max-h-full object-contain" />
-                </div>
-                <div className="collage-item relative flex-[0.9] overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3">
+                </a>
+                <a href={sponsorHeroImages[2].url} target="_blank" rel="noopener noreferrer" className="collage-item relative flex-[0.9] overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3 cursor-pointer">
                   <img src={sponsorHeroImages[2].src} alt={sponsorHeroImages[2].alt} className="w-full h-auto max-h-full object-contain" />
-                </div>
+                </a>
              </div>
              
              {/* Second row for remaining logos */}
              <div className="flex gap-[4px] h-[120px] sm:h-[150px]">
-                <div className="collage-item relative flex-1 overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3">
+                <a href={sponsorHeroImages[3].url} target="_blank" rel="noopener noreferrer" className="collage-item relative flex-1 overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3 cursor-pointer">
                   <img src={sponsorHeroImages[3].src} alt={sponsorHeroImages[3].alt} className="w-full h-auto max-h-full object-contain" />
-                </div>
-                <div className="collage-item relative flex-1 overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3">
+                </a>
+                <a href={sponsorHeroImages[4].url} target="_blank" rel="noopener noreferrer" className="collage-item relative flex-1 overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3 cursor-pointer">
                   <img src={sponsorHeroImages[4].src} alt={sponsorHeroImages[4].alt} className="w-full h-auto max-h-full object-contain" />
-                </div>
+                </a>
              </div>
              {/* Mobile Text Block */}
              <div className="collage-item px-2 mt-2">

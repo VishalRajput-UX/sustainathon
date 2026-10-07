@@ -12,7 +12,8 @@ const featuredJury = {
   organization: "Oracle",
   bio: "Mr. Sarvesh Kumar Gupta is a Senior Principal Engineer (CMT5) at Oracle specializing in Globally Distributed Databases (GDD), Exascale architectures, and high-performance data platforms. ",
   image: "https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1790004644/sarvesh-kumar-gupta-transparent.png",
-  category: ""
+  category: "",
+  profileLink: "https://blogs.oracle.com/authors/sarveshgupta/"
 };
 
 const juryMembers = [
@@ -194,10 +195,15 @@ const Jury = () => {
             <p className="font-sans text-[#a0a0a0] leading-relaxed text-sm md:text-base max-w-lg mb-10">
               {featuredJury.bio}
             </p>
-            <button className="flex items-center gap-3 group text-sm font-sans font-semibold tracking-widest uppercase transition-colors hover:text-accentOrange">
+            <a 
+              href={featuredJury.profileLink} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="flex items-center gap-3 group text-sm font-sans font-semibold tracking-widest uppercase transition-colors hover:text-accentOrange"
+            >
               VIEW PROFILE
               <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">↗</span>
-            </button>
+            </a>
           </div>
 
         </div>
