@@ -10,6 +10,7 @@ const sponsorHeroImages = [
   { src: sponsors[1].pageLogo, alt: sponsors[1].alt, isLogo: true, url: sponsors[1].url },
   { src: sponsors[2].pageLogo, alt: sponsors[2].alt, isLogo: true, url: sponsors[2].url },
   { src: sponsors[3].pageLogo, alt: sponsors[3].alt, isLogo: true, url: sponsors[3].url },
+  { src: sponsors[5].pageLogo, alt: sponsors[5].alt, isLogo: true, url: sponsors[5].url },
 ];
 
 const Sponsors = () => {
@@ -66,7 +67,7 @@ const Sponsors = () => {
           className="w-full px-2 sm:px-4 md:px-6 lg:px-[1.5vw] mt-10 md:mt-[38px] relative z-20"
         >
           {/* Desktop Grid */}
-          <div className="hidden md:grid grid-cols-[0.85fr_0.95fr_1fr_0.9fr_0.75fr_0.85fr] gap-[6px] lg:gap-2 xl:gap-[10px] h-[250px] lg:h-[280px] xl:h-[310px]">
+          <div className="hidden md:grid grid-cols-[0.85fr_0.9fr_1fr_0.9fr_0.85fr_0.75fr_0.85fr] gap-[6px] lg:gap-2 xl:gap-[10px] h-[250px] lg:h-[280px] xl:h-[310px]">
             {/* Image 1 (Logo) */}
             <a href={sponsorHeroImages[0].url} target="_blank" rel="noopener noreferrer" className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6 cursor-pointer hover:bg-white transition-colors duration-300">
               <img src={sponsorHeroImages[0].src} alt={sponsorHeroImages[0].alt} className="w-full h-auto max-h-full object-contain transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
@@ -92,6 +93,10 @@ const Sponsors = () => {
             {/* Image 5 (Logo) */}
             <a href={sponsorHeroImages[4].url} target="_blank" rel="noopener noreferrer" className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6 cursor-pointer hover:bg-white transition-colors duration-300">
               <img src={sponsorHeroImages[4].src} alt={sponsorHeroImages[4].alt} className="w-full h-auto max-h-full object-contain transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
+            </a>
+            {/* Image 6 (Logo) */}
+            <a href={sponsorHeroImages[5].url} target="_blank" rel="noopener noreferrer" className="collage-item relative w-full h-full overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-4 lg:p-6 cursor-pointer hover:bg-white transition-colors duration-300">
+              <img src={sponsorHeroImages[5].src} alt={sponsorHeroImages[5].alt} className="w-full h-auto max-h-full object-contain transition-transform duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.04]" />
             </a>
           </div>
 
@@ -119,6 +124,9 @@ const Sponsors = () => {
                 </a>
                 <a href={sponsorHeroImages[4].url} target="_blank" rel="noopener noreferrer" className="collage-item relative flex-1 overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3 cursor-pointer">
                   <img src={sponsorHeroImages[4].src} alt={sponsorHeroImages[4].alt} className="w-full h-auto max-h-full object-contain" />
+                </a>
+                <a href={sponsorHeroImages[5].url} target="_blank" rel="noopener noreferrer" className="collage-item relative flex-1 overflow-hidden group bg-[#E6E6E6] flex items-center justify-center p-3 cursor-pointer">
+                  <img src={sponsorHeroImages[5].src} alt={sponsorHeroImages[5].alt} className="w-full h-auto max-h-full object-contain" />
                 </a>
              </div>
              {/* Mobile Text Block */}

@@ -3,6 +3,7 @@ import plmLogo from '../assets/images/plm.webp';
 import studyLogo from '../assets/images/study.webp';
 import herbLogo from '../assets/images/herb.webp';
 import chingsLogo from '../assets/images/chings_logo.png';
+import droneLogo from '../assets/images/drone.png';
 
 export const sponsors = [
   { 
@@ -39,5 +40,11 @@ export const sponsors = [
     pageLogo: chingsLogo, 
     alt: "Chings Secret Sponsor",
     url: "https://www.chingssecret.com/"
+  },
+  { 
+    name: "Drone", 
+    footerLogo: droneLogo, 
+    pageLogo: droneLogo, 
+    alt: "Drone Sponsor"
   },
 ];
