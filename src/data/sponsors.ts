@@ -2,8 +2,7 @@ import scholarHubLogo from '../assets/images/ScholarHubWork.svg';
 import plmLogo from '../assets/images/plm.webp';
 import studyLogo from '../assets/images/study.webp';
 import herbLogo from '../assets/images/herb.webp';
-
-import chingsLogo from '../assets/images/Ching\'s_Secret_logo.png';
+import chingsLogo from '../assets/images/chings_logo.png';
 
 export const sponsors = [
   { 
