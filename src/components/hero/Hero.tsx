@@ -1,12 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 ;
 import HeroHeadline from './HeroHeadline';
 import HeroCards from './HeroCards';
 import gsap from 'gsap';
-import { VideoModal } from '../ui/VideoModal';
-
 import { isSiteLoaded } from '../../lib/loaderState';
+
+const VideoModal = React.lazy(() => import('../ui/VideoModal').then(m => ({ default: m.VideoModal })));
 
 const teaserVideo = 'https://drive.google.com/file/d/1tiam6lEknbEXBofnSCJHnNLVUVgliILk/view?usp=sharing';
 
@@ -145,11 +145,13 @@ const Hero = () => {
       </div>
 
       {/* Video Modal Popup */}
-      <VideoModal 
-        isOpen={isVideoModalOpen} 
-        onClose={() => setIsVideoModalOpen(false)} 
-        videoSrc={teaserVideo} 
-      />
+      <React.Suspense fallback={null}>
+        <VideoModal 
+          isOpen={isVideoModalOpen} 
+          onClose={() => setIsVideoModalOpen(false)} 
+          videoSrc={teaserVideo} 
+        />
+      </React.Suspense>
     </div>
   );
 };

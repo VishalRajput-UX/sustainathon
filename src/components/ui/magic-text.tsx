@@ -39,7 +39,7 @@ export function MagicText({ text, className }: MagicTextProps) {
   return (
     <p
       ref={containerRef}
-      className={cn("flex flex-wrap justify-center", className)}
+      className={cn("relative flex flex-wrap justify-center", className)}
     >
       {words.map((word, i) => {
         const start = i / words.length;

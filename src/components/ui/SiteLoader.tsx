@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import gsap from "gsap";
 import { AnimatePresence, motion } from "framer-motion";
-import { GrainGradient } from "@paper-design/shaders-react";
 import { isSiteLoaded, markSiteAsLoaded } from "../../lib/loaderState";
+
+const GrainGradient = lazy(() => import("@paper-design/shaders-react").then(m => ({ default: m.GrainGradient })));
 
 const SiteLoader = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -129,23 +130,25 @@ const SiteLoader = () => {
 
           {/* Shaders Layer (Mounted conditionally to save GPU) */}
           <div className="absolute inset-0 flex items-center justify-center opacity-90 pointer-events-none z-0">
-            <AnimatePresence>
-              {index === 0 && (
-                <motion.div key="shader-hola" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 0.8}} className="absolute scale-125 md:scale-100">
-                  <GrainGradient width={1280} height={720} colors={["#c6750c", "#beae60", "#d7cbc6"]} colorBack="#000a0f" softness={0.73} intensity={1} noise={0} shape="corners" speed={2} scale={0.88} rotation={68} offsetX={0.06} />
-                </motion.div>
-              )}
-              {index === 1 && (
-                <motion.div key="shader-hello" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 0.8}} className="absolute scale-125 md:scale-100">
-                  <GrainGradient width={1280} height={720} colors={["#0c6cc6", "#63bfaf", "#c6d7d3"]} colorBack="#000e0f" softness={0.7} intensity={0.15} noise={0.5} shape="wave" speed={2} scale={1.72} rotation={40} />
-                </motion.div>
-              )}
-              {index === 2 && (
-                <motion.div key="shader-namaste" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 0.8}} className="absolute scale-125 md:scale-100">
-                  <GrainGradient width={1280} height={720} colors={["#7300ff", "#eba8ff", "#00bfff", "#2b00ff"]} colorBack="#000000" softness={0.5} intensity={0.5} noise={0.25} shape="corners" speed={1} />
-                </motion.div>
-              )}
-            </AnimatePresence>
+            <Suspense fallback={null}>
+              <AnimatePresence>
+                {index === 0 && (
+                  <motion.div key="shader-hola" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 0.8}} className="absolute scale-125 md:scale-100">
+                    <GrainGradient width={1280} height={720} colors={["#c6750c", "#beae60", "#d7cbc6"]} colorBack="#000a0f" softness={0.73} intensity={1} noise={0} shape="corners" speed={2} scale={0.88} rotation={68} offsetX={0.06} />
+                  </motion.div>
+                )}
+                {index === 1 && (
+                  <motion.div key="shader-hello" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 0.8}} className="absolute scale-125 md:scale-100">
+                    <GrainGradient width={1280} height={720} colors={["#0c6cc6", "#63bfaf", "#c6d7d3"]} colorBack="#000e0f" softness={0.7} intensity={0.15} noise={0.5} shape="wave" speed={2} scale={1.72} rotation={40} />
+                  </motion.div>
+                )}
+                {index === 2 && (
+                  <motion.div key="shader-namaste" initial={{opacity: 0}} animate={{opacity: 1}} exit={{opacity: 0}} transition={{duration: 0.8}} className="absolute scale-125 md:scale-100">
+                    <GrainGradient width={1280} height={720} colors={["#7300ff", "#eba8ff", "#00bfff", "#2b00ff"]} colorBack="#000000" softness={0.5} intensity={0.5} noise={0.25} shape="corners" speed={1} />
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </Suspense>
           </div>
 
           {/* Liquid Mask Layer */}

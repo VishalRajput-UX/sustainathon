@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import infusionLogo from '../../assets/images/infusion.png';
-const inlineImage = 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789936897/team.jpg';
+const inlineImage = 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789936897/team.jpg';
 import ScrollReveal from './ScrollReveal';
 
 gsap.registerPlugin(ScrollTrigger);

@@ -6,19 +6,19 @@ const team = [
     id: 1,
     name: 'Dr. Rajneesh Kumar Singh',
     role: 'Head of the Department',
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789811760/Dr__Rajneesh_Kumar_Singh.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789811760/Dr__Rajneesh_Kumar_Singh.jpg',
   },
   {
     id: 2,
     name: 'Prof. (Dr.) Ajay Shriram Khushwaha',
     role: 'Deputy Head of the Department',
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789811526/WhatsApp_Image_2026-09-18_at_22.26.20.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789811526/WhatsApp_Image_2026-09-18_at_22.26.20.jpg',
   },
   {
     id: 3,
     name: 'Ms. Kushwant Virdi',
     role: 'Co-Convener(Event Coordinator)',
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789745381/IMG_0869.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789745381/IMG_0869.jpg',
   }
 ];
 

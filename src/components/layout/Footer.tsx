@@ -2,16 +2,15 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { LogoCloud } from "../ui/logo-cloud-4";
-import scholarHubLogo from "../../assets/images/ScholarHubWork.svg";
+import { sponsors } from "../../data/sponsors";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const logos = [
-  {
-    src: scholarHubLogo,
-    alt: "ScholarHub Logo",
-  },
-];
+const logos = sponsors.map(s => ({
+  src: s.footerLogo,
+  alt: s.alt,
+  url: s.url
+}));
 
 const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);
@@ -144,8 +143,8 @@ const Footer = () => {
         <div className="w-full max-w-[1920px] mx-auto px-6 md:px-12 mt-4 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[#888888] font-normal">
           <p>© 2026 Sustainathon. All Rights Reserved.</p>
           <div className="flex gap-2">
-            <a href="https://www.instagram.com/whos.vishuu/" className="hover:text-white transition-colors">Developed By</a>
-            <a href="https://www.instagram.com/whos.vishuu/" className="hover:text-white transition-colors">Vishal</a>
+            <a href="https://portfolio-vishuu.netlify.app/" className="hover:text-white transition-colors">Developed By</a>
+            <a href="https://portfolio-vishuu.netlify.app/" className="hover:text-white transition-colors">Vishal</a>
           </div>
         </div>
       </div>

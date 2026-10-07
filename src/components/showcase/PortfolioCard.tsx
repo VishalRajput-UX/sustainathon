@@ -20,6 +20,8 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ item }) => {
       <img 
         src={item.image} 
         alt={item.title.replace('\n', ' ')}
+        loading="lazy"
+        decoding="async"
         className="absolute inset-0 w-full h-full object-cover transition-transform duration-[600ms] ease-out group-hover:scale-[1.04]"
       />
     </div>

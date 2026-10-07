@@ -2,4 +2,7 @@ node_modules/
 *.tsbuildinfo
 output/playwright/
 .playwright-cli/
-dist
+dist.DS_Store
+
+.DS_Store
+dist/

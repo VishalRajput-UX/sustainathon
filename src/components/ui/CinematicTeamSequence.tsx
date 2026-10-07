@@ -14,47 +14,47 @@ const teamMembers = [
     id: 1,
     name: 'Moozuna Laskar',
     role: 'Club Precident',
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935556/a.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789935556/a.jpg',
   },
   {
     id: 2,
     name: 'Vishal Singh',
     role: 'Gencode Club Lead',
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935555/vishal.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789935555/vishal.jpg',
   },
   {
     id: 3,
     name: 'Rahul Raj',
     role: 'IOTronix Lead',
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935556/c.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789935556/c.jpg',
   },
   {
     id: 4,
     name: 'Umang Varshney',
     role: 'CloudTitans Lead',
   
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935556/b.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789935556/b.jpg',
   },
   {
     id: 5,
     name: 'Harsh Raj',
     role: 'FrameX Lead',
 
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935556/harsh.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789935556/harsh.jpg',
   },
   {
     id: 6,
     name: 'Nirmal Puri',
     role: 'Cybershield Lead',
 
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935556/nirmal.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789935556/nirmal.jpg',
   },
   {
     id: 7,
     name: 'Moozuna Lashkar',
     role: 'OriginX Lead',
   
-    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/v1789935556/a.jpg',
+    image: 'https://res.cloudinary.com/uj8rnowh/image/upload/f_auto,q_auto/v1789935556/a.jpg',
   }
 ];
 
@@ -281,6 +281,8 @@ export const CinematicTeamSequence = () => {
               <img 
                 src={teamMembers[0].image} 
                 alt={teamMembers[0].name}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover opacity-60"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
@@ -306,6 +308,8 @@ export const CinematicTeamSequence = () => {
             <img 
               src={member.image} 
               alt={member.name}
+              loading="lazy"
+              decoding="async"
               className="absolute inset-0 w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />

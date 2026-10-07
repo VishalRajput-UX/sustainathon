@@ -119,7 +119,7 @@ const HeroCards = () => {
 
   return (
     <div ref={containerRef} className="relative w-full h-[400px] flex items-center justify-center mt-8 perspective-1000">
-      {heroCards.map((card, i) => {
+      {heroCards.slice(0, 5).map((card, i) => {
         
         const isHovered = hoveredIndex === i;
         const isOtherHovered = hoveredIndex !== null && hoveredIndex !== i;
@@ -166,6 +166,8 @@ const HeroCards = () => {
                 <img 
                   src={card.image} 
                   alt={card.title.replace('\n', ' ')} 
+                  // @ts-ignore: React 18 runtime requires lowercase, but @types/react expects uppercase
+                  fetchpriority={i === 2 ? "high" : "auto"}
                   className="absolute inset-0 w-full h-full object-cover opacity-70 transition-transform duration-700 hover:scale-105"
                 />
                 
