@@ -45,6 +45,7 @@ export const sponsors = [
     name: "Drone", 
     footerLogo: droneLogo, 
     pageLogo: droneLogo, 
-    alt: "Drone Sponsor"
+    alt: "Drone Sponsor",
+    url: "https://droneacademyofindia.com/"
   },
 ];
